@@ -1,0 +1,36 @@
+{
+  "name": "ChilledChino Documentation",
+  "children": [
+    {
+      "type": "page",
+      "name": "Introduction",
+      "url": "/docs"
+    },
+    {
+      "type": "page",
+      "name": "Getting Started",
+      "url": "/docs/getting-started"
+    },
+    {
+      "type": "folder",
+      "name": "AI Features",
+      "children": [
+        {
+          "type": "page",
+          "name": "AI Chat",
+          "url": "/docs/ai/overview"
+        },
+        {
+          "type": "page",
+          "name": "Usage Limits",
+          "url": "/docs/ai/limits"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Privacy",
+      "url": "/docs/privacy/overview"
+    }
+  ]
+}
