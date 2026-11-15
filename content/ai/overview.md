@@ -1,74 +1,39 @@
-# AI Chat
+# AI Chat & Modes
 
-Chino's AI answers questions, summarizes channels, and drafts server changes. It uses only data the server and the person asking are allowed to see, and it never changes a server by itself.
+Chino's AI answers questions, summarizes channels, drafts automations, and plans server changes. It uses only data the server and the person asking are allowed to see, and **never modifies a server by itself**.
 
-## The five features
+<!-- TODO: Put screenshot/video of `/chat` mode switcher or [`/ask`](/docs/reference/commands) in Discord here. -->
+## The Six AI Features
 
-| Feature | What it does | Who can use it |
-|---|---|---|
-| **Chat** | Everyday questions in chat. | Admins only, Members, configurable |
-| **Server knowledge** | Answers from sources an admin approved, with citations. | Admins only, Members, or Public |
-| **Catch Up** | Summarizes a channel the person can already read. | Admins only, Members, configurable |
-| **Automation** | Drafts automations for an admin to review. | Admins only (always) |
-| **Server setup** | Plans channel and role changes for an admin to approve. | Admins only (always) |
-
-Each request belongs to exactly one feature. Every permission check runs against that feature.
-
-## Access levels
-
-Admins set Chat, Server knowledge and Catch Up to one of:
-
-- **Admins only** — plus an optional allow-list of roles and people.
-- **Members** — anyone in the server.
-- **Public** — anyone, signed in or not. Only Server knowledge can be public.
-
-New servers start these three at **Members**. Automation and Server setup are always admins only. Opening a feature to the public requires the Manage Server permission and is audited.
+| Feature | What it does | Where to use | Who can use it |
+|---|---|---|---|
+| **Chat** | Everyday questions with server-aware read tools | [`/ask`](/docs/reference/commands), `/chat`, `/dashboard/<id>/chat` | Configurable (*Admins*, *Members*) |
+| **Server Knowledge** | Answers strictly from approved sources with citations | [`/ask-server`](/docs/reference/commands), `/chat/<slug>` | Configurable (*Admins*, *Members*, *Public*) ([details](/docs/ai/knowledge)) |
+| **Catch Up** | Summarizes recent messages in one channel (max 15 citations) | [`/catchup`](/docs/reference/commands), `/dashboard/<id>/chat` | Configurable (*Admins*, *Members*) |
+| **Automation** | Drafts event-condition-action rules for review | [`/automate`](/docs/reference/commands) (`draft`), `/dashboard/<id>/chat` | Admins only ([workflows](/docs/server/engagement/automation)) |
+| **Server Setup** | Plans channel and role changes for approval | [`/setup`](/docs/reference/commands), `/dashboard/<id>/chat` | Admins only (always) |
+| **Docs Help** | Answers questions about Chino and highlights dashboard UI | `/docs` assistant | Everyone (guests included) |
 
 ## Models
 
-- People pick a model alias, or **Auto**. Real model names are never shown.
-- **Auto** matches the model to the task: harder tasks (Server setup, Automation) get a stronger model than light chat, within the limits of the person's plan.
-- A plan is never given a model it may not use. A person's own pick is respected.
+Pick a model from the menu or leave it on **Auto**. **Auto** picks a stronger model for harder tasks like *Server Setup* and *Automation* and a lighter model for quick chat, within your plan's limits (for up to date data, see [Pricing and Limits](/docs/reference/pricing)).
 
-## What the AI can read
+## What the AI Can Read
 
-The AI reads a channel only when **both** are true:
-
-1. An admin added it to "Channels the AI may read".
-2. The person asking can read it in Discord.
-
-Other rules:
-
-- In a public channel, the AI is limited to what that channel's audience can see. Private threads are never read there.
-- Catch Up reads only the channel it is asked in.
-- Messages from people who opted out of the AI are skipped, and their names and mentions are not resolved.
-- The AI can only use tools it was offered. Anything else is refused.
+- **Channels:** Readable only when **both** an admin added the channel in **Channels & Memory** (`/dashboard/<id>/ai-chats`) **and** the asker has Discord permission to read it.
+- **Forum Channels:** Forum posts are listed, searched by title/tags, and read under the same two conditions.
+- **Public Replies:** In a public Discord channel, Chino only reads what that channel's audience can see; private threads are never read there.
+- **Opt-Outs:** Messages from anyone who [opted out of AI](/docs/privacy/overview) are skipped, and their names/mentions are never resolved.
+- **Personal Tools:** Signed-in users in interactive Personal or Server chat can ask Chino to list, create, snooze, or cancel their own [DM reminders](/docs/personal/reminders) and list or create their own [Chino Together plans](/docs/together/plans).
 
 ## Pictures
 
-A picture reaches the AI only if the person's switch, the server's switch and the plan all allow it. Limits: up to 3 pictures, 5 MB each, PNG / JPEG / WebP / GIF. Guests cannot send pictures.
+An image reaches the AI only when **your personal switch**, **the server's switch**, and **your plan** all allow it.
 
-## Server knowledge
+- **Limits:** Up to **3 images**, **5 MB** each (`PNG`, `JPEG`, `WebP`, `GIF`).
+- **Guests:** Cannot send images.
 
-- An admin adds sources: pasted text, a web page, a channel, or pinned messages.
-- Answers come only from those sources and cite them. The AI says it is not sure when evidence is weak.
-- A channel or pinned source is used either for members who can read that channel (default) or for everyone. Choosing everyone needs Manage Server and is audited.
-- Nobody who opted out is ever quoted.
-- Files and pictures in sources are named but never read, fetched or linked. Asked for a file, the AI points the person to the server.
-- Sources refresh every 24 hours; sources open to everyone every hour. Limits: 25 sources per server, 500 most recent messages per channel source.
+## Safe Server Changes
 
-## Guests
-
-- Guests start at `/chat` (plain chat, no server data) or a server's public link `/chat/<id>`.
-- A public link works only while Server knowledge is public. The link id is random, not the server id, and an admin can rotate it at any time.
-- A guest passes a Cloudflare Turnstile check, then gets a session good for one server (or none) for 24 hours.
-- In a server, a guest can use Server knowledge only. Never Chat, Catch Up, Automation or Server setup.
-- A guest's message is capped at 1,000 characters (the server's own cap for everyone is 8,000).
-
-## Behavior
-
-- Replies are short and chat-like, no filler.
-- Text the AI reads (messages, web pages, sources) is treated as evidence, never as instructions.
-- The AI never changes a server on its own. Server setup produces a plan an admin approves; automations are drafts saved only when a person presses Create.
-
-See [Usage Limits](/docs/ai/limits) for allowances and [Privacy](/docs/privacy/overview) for what is stored.
+- **Server Setup ([`/setup`](/docs/reference/commands)):** Starts by asking *"What may Chino change?"*, inspects the server, and outputs an approval card. Requires `Manage Server` (and bot `Manage Channels` + `Manage Roles`). Nothing runs until you press **Approve**.
+- **Automation Drafts:** Outputs a validated rule card with **Create (turned off)**, **Create and turn on**, or **Discard**.

@@ -1,48 +1,39 @@
-# Privacy
+# Privacy & Data Rules
 
-What Chino's AI stores, for how long, and the controls you have.
+What Chino processes, what is stored, for how long, and the controls you have.
 
-## What reaches the AI provider
+## What Reaches the AI Provider
 
-Prompts go to the AI provider the bot's operator configured. Sent: the system rules, your message and recent turns of that chat, tool results the AI asked for (such as channel messages or knowledge text), and pictures if allowed. Not sent: tokens, passwords, or other servers' data. The operator names the provider in their privacy policy, and the provider's own terms apply to what it receives.
+Prompts go to the AI provider configured by the bot's operator. Sent: system rules, your message and recent chat turns, tool results the AI requested (such as allowed channel messages or knowledge passages), and pictures if allowed. **Never sent:** tokens, passwords, or other servers' data. The provider's own terms apply to what it receives.
 
-## What is stored
+## What Is Stored
 
-| Data | Stored? | How long |
+| Data | Stored? | Retention |
 |---|---|---|
-| Chats | Only with consent (see below) | 30 days without activity |
-| Unsaved chat context | In memory only | ~30 minutes |
-| Raw channel history, picture data, model reasoning | Never written to storage | — |
-| Usage records (counts, timings) | Yes, unless a server turns it off | — |
-| Guest counters (session id + address hash) | Yes | 40 days |
+| **Saved AI Chats** | Only when **both** you and (for server chats) server admins enable saving | **30 days** without activity |
+| **Unsaved AI Context** | In memory only | **~30 minutes** |
+| **Docs Assistant Questions** | Never saved (even if chat saving is on) | - |
+| **Raw Channel History, Images, Model Reasoning** | Never written to storage | - |
+| **AI Usage Records** | Counts, timings, model alias, tokens only (no text); servers can set data use to `none` | - |
+| **Guest Counters** | Session ID + short hash of visitor address (never raw IP) | **40 days** |
+| **[Support Desk](/docs/server/support/desks) Transcripts** | Stored for closed tickets | **30 days** default (configurable per server) |
+| **Analytics Digest Messages** | Read in memory, summarized without authors/links, and dropped | Never stored |
 
-### Chats are saved only with consent
+Turning off chat saving (personally or per server) immediately deletes the saved chats it covered. Guests' chats are never saved.
 
-A chat is saved only when the person turned saving on **and**, for a server chat, the server's admins turned "save history" on (off by default). Turning a switch off deletes the chats it covered. Guests' chats are never saved.
+## Opting Out
 
-### Logs never hold content
+Anyone can switch the AI off for themselves in [`/account`](/docs/reference/commands) (`privacy`) or `/me/settings`:
 
-Prompts, answers and retrieved text are never logged. Usage records hold counts and timings only — who or which server, feature, model alias, tokens, status — never the text. A server can switch usage records off ("data use: none").
+- The AI stops running for you immediately (including [`/ask-server`](/docs/reference/commands) and [Support Desk](/docs/server/support/desks) AI).
+- Your messages and forum posts are skipped by AI reading tools and never quoted from [Server Knowledge](/docs/ai/knowledge).
 
-## Opting out
+## Admin Controls
 
-Anyone can switch the AI off for themselves, from the account panel in Discord or the dashboard. The AI then does not run for them, anything in progress is stopped, and their messages are left out of what the AI reads and are never quoted from a knowledge source.
+Admins can disable AI, restrict features, disable image inputs, disable chat saving, restrict readable channels, and audit all changes.
 
-## Admin controls
+## Known Limitations
 
-Admins can:
-
-- Turn the AI off for the server.
-- Restrict it to chosen features.
-- Switch pictures off.
-- Turn chat saving on or off.
-- Choose who can use each feature.
-- Choose which channels the AI may read.
-
-All of these changes are audited.
-
-## Known limitations
-
-- **Delete lag.** A deleted or edited message can still be quoted from a knowledge source until the next re-read (up to an hour for sources open to everyone, 24 hours otherwise).
-- **Opt-out and old messages.** Opting out stops the AI reading your messages from then on; it does not remove text the provider already received.
-- **Provider retention.** What the configured provider keeps, and for how long, is decided by that provider.
+- **Delete lag:** A deleted or edited message can still be quoted from a knowledge source until the next re-read (up to 1 hour for public sources, 24 hours otherwise).
+- **Opt-out and past calls:** Opting out stops future reads; it cannot remove text already sent to the upstream provider.
+- **Provider retention:** Retention by the upstream AI provider is governed by that provider's policy.

@@ -12,25 +12,271 @@
       "url": "/docs/getting-started"
     },
     {
+      "type": "page",
+      "name": "Master Feature List",
+      "url": "/docs/features"
+    },
+    {
+      "type": "separator",
+      "name": "AI & Music"
+    },
+    {
       "type": "folder",
       "name": "AI Features",
       "children": [
         {
           "type": "page",
-          "name": "AI Chat",
+          "name": "AI Chat & Modes",
           "url": "/docs/ai/overview"
         },
         {
           "type": "page",
-          "name": "Usage Limits",
+          "name": "Server Knowledge & /ask-server",
+          "url": "/docs/ai/knowledge"
+        },
+        {
+          "type": "page",
+          "name": "Access Levels & Guest Chat",
+          "url": "/docs/ai/access-guests"
+        },
+        {
+          "type": "page",
+          "name": "Usage Limits & Fair Use",
           "url": "/docs/ai/limits"
         }
       ]
     },
     {
-      "type": "page",
-      "name": "Privacy",
-      "url": "/docs/privacy/overview"
+      "type": "folder",
+      "name": "Music & Web DJ",
+      "children": [
+        {
+          "type": "page",
+          "name": "Playing Music in Discord",
+          "url": "/docs/music/playback"
+        },
+        {
+          "type": "page",
+          "name": "Crossfade, Autoplay & Lyrics",
+          "url": "/docs/music/advanced"
+        },
+        {
+          "type": "page",
+          "name": "Web DJ & Personal Playlists",
+          "url": "/docs/music/web-dj"
+        }
+      ]
+    },
+    {
+      "type": "separator",
+      "name": "Server Features"
+    },
+    {
+      "type": "folder",
+      "name": "Moderation & Safety",
+      "children": [
+        {
+          "type": "page",
+          "name": "Moderation Commands & Cases",
+          "url": "/docs/server/moderation/commands"
+        },
+        {
+          "type": "page",
+          "name": "AutoMod",
+          "url": "/docs/server/moderation/automod"
+        },
+        {
+          "type": "page",
+          "name": "Member Reports & Mod Logs",
+          "url": "/docs/server/moderation/reports-logs"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Support Desk",
+      "children": [
+        {
+          "type": "page",
+          "name": "Support Desks & Ticket Types",
+          "url": "/docs/server/support/desks"
+        },
+        {
+          "type": "page",
+          "name": "AI Triage, Escalation & Queue",
+          "url": "/docs/server/support/triage"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Onboarding, Roles & Canvas",
+      "children": [
+        {
+          "type": "page",
+          "name": "Welcome & Farewell Greetings",
+          "url": "/docs/server/onboarding/greetings"
+        },
+        {
+          "type": "page",
+          "name": "Custom Canvas Cards",
+          "url": "/docs/server/onboarding/canvas"
+        },
+        {
+          "type": "page",
+          "name": "Autoroles & Role Menus",
+          "url": "/docs/server/onboarding/roles"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Leveling, Economy & Events",
+      "children": [
+        {
+          "type": "page",
+          "name": "Leveling & XP",
+          "url": "/docs/server/community/leveling"
+        },
+        {
+          "type": "page",
+          "name": "Economy, Shop & Quests",
+          "url": "/docs/server/community/economy"
+        },
+        {
+          "type": "folder",
+          "name": "Giveaways",
+          "children": [
+            {
+              "type": "page",
+              "name": "Creating & Managing Giveaways",
+              "url": "/docs/server/community/giveaways"
+            },
+            {
+              "type": "page",
+              "name": "Entry Requirements",
+              "url": "/docs/server/community/giveaways-requirements"
+            },
+            {
+              "type": "page",
+              "name": "Winner Modes & Lucky Draw",
+              "url": "/docs/server/community/giveaways-lucky-draw"
+            }
+          ]
+        },
+        {
+          "type": "page",
+          "name": "Birthdays & Mini-Games",
+          "url": "/docs/server/community/birthdays-games"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Voice, Engagement & Analytics",
+      "children": [
+        {
+          "type": "page",
+          "name": "Managed Voice Channels",
+          "url": "/docs/server/engagement/voice"
+        },
+        {
+          "type": "page",
+          "name": "Auto-Response, Starboard & Counters",
+          "url": "/docs/server/engagement/tools"
+        },
+        {
+          "type": "page",
+          "name": "Server Automation (Workflows)",
+          "url": "/docs/server/engagement/automation"
+        },
+        {
+          "type": "page",
+          "name": "Analytics & Scheduled Reports",
+          "url": "/docs/server/engagement/analytics"
+        }
+      ]
+    },
+    {
+      "type": "separator",
+      "name": "Personal & Admin"
+    },
+    {
+      "type": "folder",
+      "name": "Personal Chino",
+      "children": [
+        {
+          "type": "page",
+          "name": "Account & Profile",
+          "url": "/docs/personal/account"
+        },
+        {
+          "type": "page",
+          "name": "Reminders",
+          "url": "/docs/personal/reminders"
+        },
+        {
+          "type": "page",
+          "name": "Right-Click AI Actions",
+          "url": "/docs/personal/context-actions"
+        },
+        {
+          "type": "page",
+          "name": "Entertainment & Utilities",
+          "url": "/docs/personal/utilities"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Permissions, Plans & Privacy",
+      "children": [
+        {
+          "type": "page",
+          "name": "Dashboard Permissions (RBAC)",
+          "url": "/docs/admin/permissions"
+        },
+        {
+          "type": "page",
+          "name": "Settings Backup & Revisions",
+          "url": "/docs/admin/backup-revisions"
+        },
+        {
+          "type": "page",
+          "name": "Plans & Limits",
+          "url": "/docs/admin/plans"
+        },
+        {
+          "type": "page",
+          "name": "Privacy & Data Rules",
+          "url": "/docs/privacy/overview"
+        },
+        {
+          "type": "page",
+          "name": "Bug Reports, Feedback & Tickets",
+          "url": "/docs/support/tickets"
+        }
+      ]
+    },
+    {
+      "type": "separator",
+      "name": "Chino Together"
+    },
+    {
+      "type": "folder",
+      "name": "Chino Together",
+      "children": [
+        {
+          "type": "page",
+          "name": "Group Plans & Scheduling",
+          "url": "/docs/together/plans"
+        },
+        {
+          "type": "page",
+          "name": "Voting, Sessions & Voice Handoff",
+          "url": "/docs/together/sessions"
+        }
+      ]
     }
   ]
 }

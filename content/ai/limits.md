@@ -1,41 +1,37 @@
-# Usage Limits
+# Usage Limits & Fair Use
 
-Limits keep the AI fair and prevent any one person or server from exhausting it.
+Limits keep AI usage fair across users, servers, and guests. View your personal usage meters in **Chat Settings → Usage** and server meters in **Dashboard → Usage & Limits** (`/dashboard/<id>/ai-usage`).
 
-## Plan allowances
+## Plan Allowances
 
-Each person's plan sets:
+- **Per-Person Limits:** Your plan sets your **daily window allowance**, **concurrent requests**, **requests per minute**, **max steps**, **max tool calls**, and **max answer length**. For up to date data, see [Pricing and Limits](/docs/reference/pricing).
+- **Per-Server Background Allowance:** Background AI features (like AI music autoplay or scheduled report summaries) use the **server's** allowance, not yours.
+- **Failed Requests:** If a request fails through no fault of yours, it is not counted against your limit.
 
-- A **daily** allowance.
-- A **running-at-once** limit (how many requests at the same time).
-- A **per-minute** limit.
+## Misuse Pauses
 
-Each server also has its own allowance for background work (for example music suggestions), charged to the server, not to a person.
+Chino refuses requests that are illegal, harmful, harassing, about private data, or attempt to override its rules (including prompt-injection attempts):
 
-A request is charged before it runs and refunded if it fails.
-
-## Misuse pauses
-
-The AI refuses requests that are illegal, harmful, harassing, about private data, or that try to override its rules. Refusals add points to the person who sent them:
-
-- **3 points** in 24 hours → a warning.
-- **6 points** → access pauses for 24 hours, or until staff clears it.
-
-Being asked *about* a hostile message never pauses the person who was only asked about it. Thresholds are owner settings.
-
-## Guest caps
-
-Guests (not signed in) are capped per day on every axis so they cannot exhaust the bot. Defaults:
-
-| Cap | Default |
+| Points in 24 hours | Action |
 |---|---|
-| Per session | 10 / day |
-| Per visitor address | 30 / day |
-| All guests together | 500 / day |
-| Guests outside servers | 100 / day |
+| **3 points** | Warning |
+| **6 points** | AI access paused for **24 hours** (or until cleared by bot staff) |
 
-Caps live in the owner admin panel. Guest counters are tracked against a session id and a short hash of the visitor's address (never the address itself), so limits survive a new session.
+Being asked *about* a hostile message in a channel never penalizes the person who asked.
 
-## When the AI is not set up
+## Guest Caps
 
-If the bot's owner has configured no model, the AI replies that it is not set up and nothing is charged.
+Guests (not signed in) have strict daily caps. Defaults:
+
+| Scope | Normal Chat | Docs Assistant (`/docs`) |
+|---|---|---|
+| Per session | **10 / day** | **5 / day** |
+| Per visitor address | **30 / day** | **10 / day** |
+| All guests combined | **500 / day** | **300 / day** |
+| Guests outside servers | **100 / day** | - |
+
+Signed-in users have a separate **30 / day** allowance for the Docs Assistant that does not consume their normal AI chat quota.
+
+## AI Activity Log (`/me/studio`)
+
+Signed-in users can view paginated audit metadata of their own AI requests (timestamp, feature, model alias, tokens, duration, status) at `/me/studio`. Prompts and answers are never stored there.

@@ -1,27 +1,31 @@
 # Getting Started
 
-## Add Chino
+## 1. Choose How to Add Chino
 
-1. Invite Chino to your server from the dashboard.
-2. Grant the permissions it asks for. Missing permissions disable the features that need them.
-3. Open the dashboard and select your server.
+| Install type | Where it works | How to add |
+|---|---|---|
+| **Server Install** | Inside a Discord server | Invite Chino from the dashboard and grant the requested permissions. Missing permissions disable only the features that need them. |
+| **User Install (Personal)** | Any server, DMs, and group DMs | Authorize Chino on your Discord account to use [`/account`](/docs/reference/commands), [`/remind`](/docs/reference/commands), [`/ask`](/docs/reference/commands), [`/together`](/docs/reference/commands), and right-click message actions anywhere. |
 
-## The dashboard
+<!-- TODO: Put screenshot of Discord invite / User Install prompt here. -->
+## 2. Configure a Server
 
-The dashboard is where admins configure everything: AI, moderation, roles, XP, economy, giveaways and utilities. Each module is a page under your server.
+Everything can be managed from **Discord panels** or the **web dashboard** (`/dashboard`):
 
-- **Admin** means anyone with a dashboard permission in that server, including a permission delegated for a single module.
-- Changes to who-can-use-what, public links, AI sources and model settings are written to the audit log.
+- **In Discord:** Run [`/configure`](/docs/reference/commands), [`/mod`](/docs/reference/commands), [`/music`](/docs/reference/commands), [`/automate`](/docs/reference/commands), [`/economy`](/docs/reference/commands), or [`/giveaway`](/docs/reference/commands).
+- **On the Web:** Open `/dashboard`, pick your server, and edit any [module](/docs/reference/permissions).
+- **Who can manage what:** Server owners, `Administrator`, and `Manage Server` have full access. Other roles or members can be granted **Read** or **Write** access per [module](/docs/reference/permissions) in **Permissions** (see [Dashboard Permissions](/docs/admin/permissions)).
 
-## Turn on the AI
+## 3. Turn On AI (Optional)
 
-1. Open the **AI** page for your server.
-2. The AI is off until an admin configures it. A model must be set up by the bot's owner, or the AI replies that it is not set up.
-3. Choose who can use each feature (see [AI Chat](/docs/ai/overview)).
-4. Choose which channels the AI may read, and whether members can save chats.
+Server AI starts **off** until an admin configures it:
 
-## Use the AI
+1. Open **Dashboard → AI Settings** (`/dashboard/<id>/ai`) and enable AI.
+2. Pick which features are on ([Chat](/docs/ai/overview), [Server Knowledge](/docs/ai/knowledge), [Catch Up](/docs/ai/overview), [Automation](/docs/server/engagement/automation), [Server Setup](/docs/ai/overview), [Support](/docs/server/support/desks)).
+3. In **Channels & Memory**, choose which channels Chino may read.
+4. In **Permissions & Links**, set who can use each feature ([Access Levels & Guest Chat](/docs/ai/access-guests)).
 
-- **In Discord**: ask Chino in a channel it is allowed to read.
-- **On the dashboard**: members sign in with Discord and chat.
-- **Public link**: if you open Server knowledge to the public, share the generated link. It does not expose your server id.
+## 4. Need Help?
+
+- Use the **Ask Chino** assistant on `/docs` to search documentation or jump to dashboard pages.
+- Submit a bug report or feature request with [`/report`](/docs/reference/commands) in Discord or on `/feedback` (see [Bug Reports, Feedback & Tickets](/docs/support/tickets)).

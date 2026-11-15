@@ -1,16 +1,20 @@
 # ChilledChino
 
-ChilledChino (Chino) is a Discord bot with a web dashboard. It handles music, moderation, roles, XP and economy, giveaways, utilities, and an AI assistant.
+ChilledChino (Chino) is a Discord bot and web workspace covering AI, music, moderation, support desks, onboarding, leveling, economy, giveaways, voice rooms, and personal tools.
 
-This documentation covers what Chino does and how to configure it. It currently focuses on the AI features.
+<!-- TODO: Put hero screenshot or overview video of Chino in Discord + web workspace here. -->
+## Product Surfaces
 
-## Sections
+| Surface | Where it runs | What it covers |
+|---|---|---|
+| **AI & Music** | Discord + `/chat` + `/music` | [6 AI modes](/docs/ai/overview), [knowledge Q&A](/docs/ai/knowledge), [Web DJ](/docs/music/web-dj), [crossfade, synced lyrics, audio effects](/docs/music/advanced) |
+| **Community Chino** | Your Discord server + `/dashboard` | [Moderation](/docs/server/moderation/commands), [AutoMod](/docs/server/moderation/automod), [Support Desk](/docs/server/support/desks), [Canvas cards](/docs/server/onboarding/canvas), [roles](/docs/server/onboarding/roles), [XP](/docs/server/community/leveling), [economy](/docs/server/community/economy), [giveaways](/docs/server/community/giveaways), [voice rooms](/docs/server/engagement/voice), [workflows](/docs/server/engagement/automation) |
+| **Personal Chino** | Any server, DMs, group DMs + `/me` | [Right-click AI actions](/docs/personal/context-actions), [reminders](/docs/personal/reminders), [account/privacy controls](/docs/personal/account), [utilities](/docs/personal/utilities) |
+| **Chino Together** | Discord + `/together` | [Group plans, 30-minute availability grids](/docs/together/plans), [ranked-choice voting, RSVPs, voice handoff](/docs/together/sessions) |
 
-- **[Getting Started](/docs/getting-started)** — add Chino and reach the dashboard.
-- **[AI Chat](/docs/ai/overview)** — what the AI does, who can use it, what it reads.
-- **[Usage Limits](/docs/ai/limits)** — allowances, fair-use pauses, guest caps.
-- **[Privacy](/docs/privacy/overview)** — what is stored, for how long, and your controls.
+## Quick Links
 
-## The AI in one line
-
-Chino's AI answers questions in Discord and on the dashboard, using only the data the server and the person are allowed to see. It never changes a server on its own.
+- **[Getting Started](/docs/getting-started)** - add Chino to a server or install it for yourself.
+- **[Master Feature List](/docs/features)** - every feature in one index.
+- **[Commands Reference](/docs/reference/commands)** - live list of every slash command, context menu, and panel.
+- **[Permissions Reference](/docs/reference/permissions)** - live list of dashboard modules and required permissions.
