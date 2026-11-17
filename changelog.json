@@ -1,0 +1,255 @@
+[
+  {
+    "version": "4.1.1",
+    "major": 4,
+    "minor": 1,
+    "patch": 1,
+    "prerelease": null,
+    "released_at": "2026-11-17",
+    "summary": "Fix interaction channel check on external servers and show ErrorId in console logs.",
+    "changes": [
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Fix NullReferenceException in channel checks on external servers",
+        "desc": "Fall back to interaction channel ID so user-installed context commands (Explain, Ask Chino) run in servers where Chino is not a member.",
+        "timestamp": "2026-11-17T14:30:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Show ErrorId in text console output template",
+        "desc": "Reference IDs (E-XXXXXXXX) are now visible in plain text stdout logs.",
+        "timestamp": "2026-11-17T14:35:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Fix /user info silent failure in DMs and external servers",
+        "desc": "Prevent Discord 400 Bad Request error on empty banner URLs, add guild null-safety for non-guild callers, and await paginator dispatches.",
+        "timestamp": "2026-11-17T15:10:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Dynamic Bot & Gateway version display on /status",
+        "desc": "Display live liveness, database readiness, and runtime version badges for both Discord Bot Core and API Gateway on the status dashboard without exposing internal metrics.",
+        "timestamp": "2026-11-17T16:15:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "ai",
+        "text": "Fix SynchronizationLockException in AgentRuntime.StartAsync",
+        "desc": "Replace thread-affine Monitor lock with async-compatible SemaphoreSlim in AgentRuntime to prevent exit failures when unwinding async state machines on ThreadPool transitions.",
+        "timestamp": "2026-11-18T00:10:00Z"
+      }
+    ]
+  },
+  {
+    "version": "4.1.0-beta.5",
+    "major": 4,
+    "minor": 1,
+    "patch": 0,
+    "prerelease": "beta.5",
+    "released_at": "2026-11-15",
+    "summary": "Major release featuring the new Music Engine with Lavalink v4 crossfade, self-healing AI circuit breaker and live topology graph, native SkiaSharp Canvas Studio, unified Support Desk with YouTrack ticketing, 3-level RBAC, and the root workspace dashboard.",
+    "changes": [
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "Lavalink v4 Crossfade & Automix Integration",
+        "desc": "Full client integration of Lavalink v4 Crossfade API (/crossfade [enabled] [duration]) with seamless audio transitions, automatic track reservations, and audio analysis-backed automix windows.",
+        "timestamp": "2026-11-15T14:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "Centralized PostgreSQL Music Catalog & Spotify Integration",
+        "desc": "Universal database cache (music_tracks, music_lyrics) providing zero-latency song resolution before falling back to Spotify Web API, supporting albums, playlists, charts, and Spotify Canvas video loops.",
+        "timestamp": "2026-11-15T13:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "Synchronized Lyrics with Real-Time Sliding Window",
+        "desc": "Word- and syllable-level synchronized lyrics playback via /lyrics and player button with a dynamic 3,800-character window preventing Discord rate limits.",
+        "timestamp": "2026-11-15T13:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "/seek Command & Precise Position Scrubbing",
+        "desc": "Added /seek slash command and dashboard scrubber slider with flexible timestamp parsing (mm:ss, seconds, hh:mm:ss) and track duration validation.",
+        "timestamp": "2026-11-15T13:15:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "Standalone /music Web App & Personal Playlists",
+        "desc": "Full-screen Apple Music Tahoe-styled desktop and mobile web player with personal playlists CRUD (/api/v1/me/playlists), server playback, queue management, and delta SSE streaming.",
+        "timestamp": "2026-11-15T13:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "music",
+        "text": "Dedicated Player Channel & Smart Lifecycle",
+        "desc": "One dedicated PlayerPanel per server with permission auto-detection, typed request support, in-memory activity ring buffer (500 events), voice co-presence checks, and idle auto-leave.",
+        "timestamp": "2026-11-15T12:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "Self-Healing AI Circuit Breaker & Failover Router",
+        "desc": "Per-model-alias circuit breaker with sliding window trip thresholds, 5-minute HalfOpen canary cooldown, and tier-bypass fallback cascading failing requests to healthy higher tiers ordered by lowest cost.",
+        "timestamp": "2026-11-15T12:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "Real-Time AI Topology Graph in Admin Console",
+        "desc": "Interactive draggable and zoomable canvas in the Next.js Ops Console fed by live SSE streams, showing in-flight turn counters, model health, electric pulse cables, and failover beams.",
+        "timestamp": "2026-11-15T11:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "Multi-Lingual AI Safety & Zero-Vulnerability PromptGuard",
+        "desc": "Leetspeak normalization, base64 instruction decoding, and prompt injection detection across 8 languages, with delimiter fencing (<<<USER_CHAT_CONTENT>>>) and system model identity scrubbing.",
+        "timestamp": "2026-11-15T11:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "3-Phase AI Access & Anonymous Guest Sessions",
+        "desc": "Granular AI access control for Members, Signed-in non-members, and 2-hour HMAC-SHA256 anonymous guest sessions validated via Cloudflare Turnstile with zero message history persistence.",
+        "timestamp": "2026-11-15T11:15:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "Interactive Docs Assistant with Dashboard Element Guidance",
+        "desc": "AI documentation assistant that answers queries, validates links against live generated docs, and opens dashboard settings pages while highlighting up to 5 target UI elements sequentially.",
+        "timestamp": "2026-11-15T11:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "canvas",
+        "text": "Native C# SkiaSharp 2D Rendering Engine",
+        "desc": "In-process SkiaSharp 2D rendering pipeline replacing external Node.js canvas service (saving 250MB+ RAM), supporting layered backgrounds, circular avatars, avatar decorations, text gradients, and progress bars.",
+        "timestamp": "2026-11-15T10:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "canvas",
+        "text": "Web Canvas Studio & Custom Font Management",
+        "desc": "Interactive visual template editor (/dashboard/[id]/canvas) with real-time SkiaSharp previews, drag-and-drop layer controls, custom TrueType/OpenType font uploads (5MB cap), and 1-click slot assignments.",
+        "timestamp": "2026-11-15T10:15:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "support",
+        "text": "Unified Multi-Desk Support Desk with AI Triage",
+        "desc": "Complete replacement of Ask Desk with multi-desk support system featuring automated AI ticket triage, custom desk instructions, moderator escalation to private Discord threads, and live transcript streaming.",
+        "timestamp": "2026-11-15T09:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "support",
+        "text": "YouTrack Ticketing Integration & Discord DM Follow-ups",
+        "desc": "Seamless bug and suggestion intake to YouTrack CHI project via /report and web forms, with Turnstile anti-abuse protection and opt-in 2-way Discord DM reply routing.",
+        "timestamp": "2026-11-15T09:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "rbac",
+        "text": "3-Level RBAC (None / Read / Write) & Master-Detail Permissions",
+        "desc": "Granular role-based access control separating read-only inspection from settings mutation, backed by a unified module registry and Master-Detail management UI for roles and members.",
+        "timestamp": "2026-11-15T09:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "moderation",
+        "text": "Honeypot Trap Channels & AutoMod Exemptions",
+        "desc": "Automated Honeypot rule engine that catches unauthorized trap channel messages and applies immediate timeouts/kicks/bans, alongside new AutoMod exempt roles, channels, and categories.",
+        "timestamp": "2026-11-15T08:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "automations",
+        "text": "Role Transition Triggers & Hardened Cron Scheduling",
+        "desc": "Added role_direction condition (role added or removed) to the visual automation builder, with UTC-aligned cron scheduling, natural language AI drafting, and error recovery.",
+        "timestamp": "2026-11-15T08:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "analytics",
+        "text": "Scheduled Server Analytics Reports & /analytics Command",
+        "desc": "Automated periodic server analytics reports delivered to Discord channels with optional AI conversation summaries, alongside an interactive standalone /analytics slash command.",
+        "timestamp": "2026-11-15T07:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Root Workspace Shell & Flat Design Skin",
+        "desc": "Unified dashboard workspace moved to root (/dashboard, /chat, /me/*, /together/*) with flat outline-free styling, floating palette, server tour, and live usage meters.",
+        "timestamp": "2026-11-15T07:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Beta 3D Spatial Showcase (/beta)",
+        "desc": "Interactive WebGL Aura shader stage with 3D perspective card deck, pointer-reactive tilt physics, real WebM feature video loops, and a 16-module visual feature atlas.",
+        "timestamp": "2026-11-15T06:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Personal Chino User-Installed App Commands",
+        "desc": "Right-click message actions (Explain, Ask Chino, Summarize, Translate) and personal onboarding that work in DMs and external servers without requiring bot guild membership.",
+        "timestamp": "2026-11-15T06:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "together",
+        "text": "Chino Together Group Plans & Voice Handoff",
+        "desc": "Coordinate plans with interactive member availability time grids, ranked choice voting, RSVP attendance tracking, and automatic voice channel moves upon event start.",
+        "timestamp": "2026-11-15T05:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Discord Components V2 Panels & 1-Click Web Links",
+        "desc": "Rebuilt Discord interactive panels (/configure, /mod, /music, /automate, /economy) with Components V2 layout, custom title emoji support, and direct 1-click web dashboard deep links.",
+        "timestamp": "2026-11-15T05:00:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Bot Internationalization (BotLocalizer)",
+        "desc": "Resource bundle-backed localization system supporting English and Japanese across slash command responses, panel sections, and user onboarding.",
+        "timestamp": "2026-11-15T04:30:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "infra",
+        "text": "Structured JSON Logging for Grafana Loki",
+        "desc": "Serilog JSON output formatter emitting machine-readable logs with trace IDs, request IDs, ErrorId tags (E-XXXXXXXX), and live dynamic exception stack toggling in /admin console.",
+        "timestamp": "2026-11-15T04:00:00Z"
+      },
+      {
+        "type": "change",
+        "scope": "infra",
+        "text": "PostgreSQL 18 Database Migration",
+        "desc": "Complete migration from legacy Apache Cassandra to PostgreSQL 18 with 75+ idempotent schema migrations, connection pooling, and transactional integrity.",
+        "timestamp": "2026-11-15T03:30:00Z"
+      },
+      {
+        "type": "change",
+        "scope": "infra",
+        "text": "Clean Configuration Architecture",
+        "desc": "Eliminated legacy YAML configuration files in favor of strict separation: environment variables for secrets and network bindings, and database rows for tunable product settings.",
+        "timestamp": "2026-11-15T03:00:00Z"
+      }
+    ]
+  }
+]
