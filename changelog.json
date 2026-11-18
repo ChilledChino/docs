@@ -54,7 +54,7 @@
         "type": "change",
         "scope": "music",
         "text": "Songs start faster",
-        "desc": "A song that has been matched to an audio stream is remembered for 12 hours, so playing it again skips the search. The audio sources are kept warm in the background, so the first song after a quiet spell no longer times out. A stream that stops working is searched for again.",
+        "desc": "A song that has been matched to an audio stream is remembered for up to six months, so playing it again starts right away without searching, even after a restart. The audio sources are kept warm in the background, so the first song after a quiet spell no longer times out. A stream that stops working is searched for again.",
         "timestamp": "2026-11-18T05:45:00Z"
       },
       {
