@@ -70,6 +70,27 @@
         "text": "Live speaking audio visualizer stream proxy",
         "desc": "Real-time SSE proxying for recording session events, dynamically streaming audio energy and speaking indicators from voice recording agents directly to the dashboard.",
         "timestamp": "2026-11-18T05:54:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "/record Discord panel for voice session control",
+        "desc": "Manage voice recording sessions directly in Discord with an interactive Components V2 panel to start or stop recording, view recent session archives, and configure channel consent and retention settings.",
+        "timestamp": "2026-11-18T12:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Voice recordings dashboard and audio playback drawer",
+        "desc": "Browse recorded voice meetings in the server dashboard with live SSE speaking visualizers, filter sessions, and listen to master or individual speaker audio tracks in an audio playback drawer.",
+        "timestamp": "2026-11-18T12:46:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "ai",
+        "text": "AI meeting transcription with speaker separation",
+        "desc": "Transcribe recorded voice meetings on demand or automatically after inactivity, mapping speech segments back to exact Discord user names and timestamps with an interactive transcript viewer and JSON export.",
+        "timestamp": "2026-11-18T12:47:00Z"
       }
     ]
   },
