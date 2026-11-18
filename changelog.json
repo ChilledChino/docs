@@ -42,6 +42,20 @@
         "text": "Fix SynchronizationLockException in AgentRuntime.StartAsync",
         "desc": "Replace thread-affine Monitor lock with async-compatible SemaphoreSlim in AgentRuntime to prevent exit failures when unwinding async state machines on ThreadPool transitions.",
         "timestamp": "2026-11-18T00:10:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "ai",
+        "text": "Chino can see pictures sent in DMs and mentions",
+        "desc": "A picture attached to a message sent to Chino in a DM or with an @mention now reaches the AI, within the usual picture limits and switches. When pictures are turned off, Chino still answers the text and says it could not see the picture.",
+        "timestamp": "2026-11-18T05:30:00Z"
+      },
+      {
+        "type": "change",
+        "scope": "music",
+        "text": "Songs start faster",
+        "desc": "A song that has been matched to an audio stream is remembered for 12 hours, so playing it again skips the search. The audio sources are kept warm in the background, so the first song after a quiet spell no longer times out. A stream that stops working is searched for again.",
+        "timestamp": "2026-11-18T05:45:00Z"
       }
     ]
   },
