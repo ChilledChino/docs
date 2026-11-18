@@ -56,6 +56,20 @@
         "text": "Songs start faster",
         "desc": "A song that has been matched to an audio stream is remembered for 12 hours, so playing it again skips the search. The audio sources are kept warm in the background, so the first song after a quiet spell no longer times out. A stream that stops working is searched for again.",
         "timestamp": "2026-11-18T05:45:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Discord voice recording pipeline and owner management console",
+        "desc": "Added high-performance voice recording architecture with Discord gateway voice relaying, consent fencing, per-channel participant tracking, and an owner recorder management panel under /admin/recorder.",
+        "timestamp": "2026-11-18T05:54:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Live speaking audio visualizer stream proxy",
+        "desc": "Real-time SSE proxying for recording session events, dynamically streaming audio energy and speaking indicators from voice recording agents directly to the dashboard.",
+        "timestamp": "2026-11-18T05:54:00Z"
       }
     ]
   },
