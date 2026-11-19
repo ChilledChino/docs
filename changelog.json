@@ -154,6 +154,27 @@
         "text": "Recordings play the whole meeting",
         "desc": "Playback now plays every speaker side by side for the full meeting, with working Solo and Mute, speaker names, a download per speaker and marks where audio could not be saved. Before, only the first couple of seconds played.",
         "timestamp": "2026-11-19T09:04:14Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "A message when your recording is ready",
+        "desc": "If you turned on \"Message me when a recording is ready\", Chino sends you a link once a meeting you were in has been saved. The link opens the recording on the dashboard after you sign in.",
+        "timestamp": "2026-11-19T09:16:15Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Recording settings, names and buttons are correct",
+        "desc": "Your recording switches now show what you saved, people are listed by name, and you only see the buttons you can use. Managers can start a recording from the dashboard, and links from Discord open the right recording.",
+        "timestamp": "2026-11-19T09:17:15Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "The live speaking view is only for the people in the meeting",
+        "desc": "Who is speaking in a live recording can only be seen by the host, managers and the people being recorded, and only for meetings in that server.",
+        "timestamp": "2026-11-19T09:18:15Z"
       }
     ]
   },
