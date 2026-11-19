@@ -133,6 +133,13 @@
         "text": "Music and recordings take turns",
         "desc": "Chino has one voice connection per server, so music cannot start while a meeting is being recorded, and a recording cannot start while music plays. Each says why.",
         "timestamp": "2026-11-19T08:17:29Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Everyone in a recorded call is told, and can opt out",
+        "desc": "When a meeting is recorded, Chino posts a notice with an Opt out button in the voice channel's chat, and does not record if it cannot post it. Opting out deletes what was recorded of you in that meeting, people who join later are included, and the host can pick exactly who to record.",
+        "timestamp": "2026-11-19T08:21:41Z"
       }
     ]
   },
