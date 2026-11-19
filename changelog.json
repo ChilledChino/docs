@@ -189,6 +189,13 @@
         "text": "Corrected what voice recording does",
         "desc": "Earlier notes for this version promised retention settings, transcripts with speaker names and transcription after inactivity. Recordings are kept a fixed 7 days, and transcripts are paused for now; everything else described in the newer recording entries is how it works.",
         "timestamp": "2026-11-19T09:20:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "The recordings page updates live",
+        "desc": "The live speaking view now connects, and a running or just-stopped meeting updates by itself instead of staying on \"Stopping\" until you refresh.",
+        "timestamp": "2026-11-19T10:52:33Z"
       }
     ]
   },
