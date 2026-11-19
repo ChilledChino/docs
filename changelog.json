@@ -91,6 +91,20 @@
         "text": "AI meeting transcription with speaker separation",
         "desc": "Transcribe recorded voice meetings on demand or automatically after inactivity, mapping speech segments back to exact Discord user names and timestamps with an interactive transcript viewer and JSON export.",
         "timestamp": "2026-11-18T12:47:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Recordings list shows sessions correctly",
+        "desc": "The recordings page now reads each meeting's status, speakers and length correctly, so live and past meetings show up as they should.",
+        "timestamp": "2026-11-19T08:05:33Z"
+      },
+      {
+        "type": "change",
+        "scope": "dashboard",
+        "text": "Recordings page matches the rest of the dashboard",
+        "desc": "The recordings page, playback drawer and transcript window now use the same plain sections, badges and buttons as the other settings pages, and their text is readable in the dark theme.",
+        "timestamp": "2026-11-19T08:06:33Z"
       }
     ]
   },
