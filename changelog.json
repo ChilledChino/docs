@@ -105,6 +105,20 @@
         "text": "Recordings page matches the rest of the dashboard",
         "desc": "The recordings page, playback drawer and transcript window now use the same plain sections, badges and buttons as the other settings pages, and their text is readable in the dark theme.",
         "timestamp": "2026-11-19T08:06:33Z"
+      },
+      {
+        "type": "change",
+        "scope": "ai",
+        "text": "Meeting transcripts are paused",
+        "desc": "Recorded meetings are not transcribed for now, and no meeting audio is sent to an AI service. Transcripts will come back once their privacy rules are in place.",
+        "timestamp": "2026-11-19T08:11:28Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Only the people in a meeting can open its recording",
+        "desc": "A recording can be opened by its host, server managers and the people who took part, unless they opted out. Recording also stays off if its settings are missing.",
+        "timestamp": "2026-11-19T08:12:28Z"
       }
     ]
   },
