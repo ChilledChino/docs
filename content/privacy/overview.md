@@ -18,8 +18,19 @@ Prompts go to the AI provider configured by the bot's operator. Sent: system rul
 | **Guest Counters** | Session ID + short hash of visitor address (never raw IP) | **40 days** |
 | **[Support Desk](/docs/server/support/desks) Transcripts** | Stored for closed tickets | **30 days** default (configurable per server) |
 | **Analytics Digest Messages** | Read in memory, summarized without authors/links, and dropped | Never stored |
+| **Voice Recordings** | The audio of each person who was recorded, in private storage. Only the host, server managers and the people who took part (and did not opt out) can play it | **7 days** after the meeting, then deleted |
+| **Meeting Transcripts** | Not made: no meeting audio is sent to an AI provider | - |
 
 Turning off chat saving (personally or per server) immediately deletes the saved chats it covered. Guests' chats are never saved.
+
+## Voice Recordings
+
+A server can record a voice meeting with `/record` or the dashboard. Nobody is recorded silently:
+
+- Chino posts a notice in the voice channel's chat for the whole meeting, and does not record if it cannot post it.
+- Turning **Include my voice** off (`/record` → Settings, or the server's Recordings page) means you are never recorded in that server.
+- Pressing **Opt out** on the notice stops recording you and deletes what was recorded of you in that meeting.
+- Recordings, and everything about them, are deleted 7 days after the meeting.
 
 ## Opting Out
 

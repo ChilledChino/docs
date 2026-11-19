@@ -175,6 +175,20 @@
         "text": "The live speaking view is only for the people in the meeting",
         "desc": "Who is speaking in a live recording can only be seen by the host, managers and the people being recorded, and only for meetings in that server.",
         "timestamp": "2026-11-19T09:18:15Z"
+      },
+      {
+        "type": "change",
+        "scope": "bot",
+        "text": "Recordings are deleted after 7 days",
+        "desc": "A recording, its playback files and everything about it are deleted 7 days after the meeting (an hour after a recording that failed to start). The privacy page now covers voice recordings.",
+        "timestamp": "2026-11-19T09:19:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Corrected what voice recording does",
+        "desc": "Earlier notes for this version promised retention settings, transcripts with speaker names and transcription after inactivity. Recordings are kept a fixed 7 days, and transcripts are paused for now; everything else described in the newer recording entries is how it works.",
+        "timestamp": "2026-11-19T09:20:54Z"
       }
     ]
   },

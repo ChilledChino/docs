@@ -66,6 +66,7 @@ Every live feature in ChilledChino, ranked from most important to least importan
 | Feature | What it does | Discord | Web |
 |---|---|---|---|
 | [**Managed Voice Rooms**](/docs/server/engagement/voice) | Join-to-Create temp voice channels with owner controls & blacklists | [`/voice`](/docs/reference/commands), [`/configure`](/docs/reference/commands) (`voice`) | `/dashboard/<id>/voice-channels` |
+| [**Voice Recordings**](/docs/privacy/overview) | Record a voice meeting with a visible notice and opt-out, play it back per speaker for 7 days (pilot servers) | [`/record`](/docs/reference/commands) | `/dashboard/<id>/recordings` |
 | [**Automation Workflows**](/docs/server/engagement/automation) | Event-condition-action rules with test simulator & revision diffs | [`/automate`](/docs/reference/commands) | `/dashboard/<id>/automation` |
 | [**Analytics & Digests**](/docs/server/engagement/analytics) | Activity charts + scheduled reports with optional AI channel summaries | [`/analytics`](/docs/reference/commands) | `/dashboard/<id>/analytics` |
 | [**Auto-Response**](/docs/server/engagement/tools) | Keyword triggers with channel/role blacklists | [`/configure`](/docs/reference/commands) (`autoresponse`) | `/dashboard/<id>/auto-response` |
