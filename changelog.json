@@ -119,6 +119,20 @@
         "text": "Only the people in a meeting can open its recording",
         "desc": "A recording can be opened by its host, server managers and the people who took part, unless they opted out. Recording also stays off if its settings are missing.",
         "timestamp": "2026-11-19T08:12:28Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Recordings respect \"Include my voice\"",
+        "desc": "A recording only captures the people in the voice channel (or the people the host picked), and never anyone who turned \"Include my voice\" off. If too many people are in the channel, the recording does not start instead of leaving some of them out.",
+        "timestamp": "2026-11-19T08:16:29Z"
+      },
+      {
+        "type": "change",
+        "scope": "music",
+        "text": "Music and recordings take turns",
+        "desc": "Chino has one voice connection per server, so music cannot start while a meeting is being recorded, and a recording cannot start while music plays. Each says why.",
+        "timestamp": "2026-11-19T08:17:29Z"
       }
     ]
   },
