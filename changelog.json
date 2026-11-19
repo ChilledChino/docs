@@ -147,6 +147,13 @@
         "text": "Recordings keep their last seconds and end on time",
         "desc": "Stopping a recording no longer throws away the audio that was still being saved, a meeting stops by itself at its time limit, and a meeting whose recorder fails ends with what was saved instead of blocking the server. Chino rejoins the call if its connection drops.",
         "timestamp": "2026-11-19T08:51:49Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Recordings play the whole meeting",
+        "desc": "Playback now plays every speaker side by side for the full meeting, with working Solo and Mute, speaker names, a download per speaker and marks where audio could not be saved. Before, only the first couple of seconds played.",
+        "timestamp": "2026-11-19T09:04:14Z"
       }
     ]
   },
