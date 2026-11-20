@@ -217,6 +217,13 @@
         "text": "Recording downloads save with a readable name",
         "desc": "Download now saves a speaker's file as channel, date and name instead of opening it in a new tab, and gets a fresh link if the old one was about to expire.",
         "timestamp": "2026-11-20T03:43:57Z"
+      },
+      {
+        "type": "change",
+        "scope": "ai",
+        "text": "Chino shows one thinking sign, then answers",
+        "desc": "Asking Chino no longer shows \"Chino is thinking\" and then \"Thinking…\" before the answer. Slash commands show Discord's own thinking message, mentions and DMs show Chino typing, and the answer appears and fills in more smoothly.",
+        "timestamp": "2026-11-20T05:15:19Z"
       }
     ]
   },
