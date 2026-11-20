@@ -20,6 +20,7 @@ Record a voice meeting and play it back per speaker for 7 days. Available in pil
 
 - **Who can listen:** the host, server managers and the people in the meeting (unless they opted out).
 - **Playback:** every speaker side by side for the whole meeting, with Solo and Mute.
+- **Who talks when:** each speaker's timeline marks when they talk, with their total talk time. **Next** and **Previous talk** jump between talks, and **Skip silence** jumps over quiet parts. Shortcuts: Space, arrow keys, N and P.
 - **Download** one speaker's file, or tick two or more speakers and **Merge** them into one file. You keep one merged file per meeting; merging again replaces it.
 - **Live view:** who is speaking, shown to the host, managers and the people being recorded.
 - **Ready message:** turn on *Message me when a recording is ready* to get a DM with a link once it is saved.
