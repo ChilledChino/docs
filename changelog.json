@@ -196,6 +196,13 @@
         "text": "The recordings page updates live",
         "desc": "The live speaking view now connects, and a running or just-stopped meeting updates by itself instead of staying on \"Stopping\" until you refresh.",
         "timestamp": "2026-11-19T10:52:33Z"
+      },
+      {
+        "type": "change",
+        "scope": "bot",
+        "text": "Recordings take much less storage",
+        "desc": "Each speaker's playback file now stores silence far more compactly, and the raw recorded pieces are removed once the playback files are ready, so a long meeting with little talking uses a fraction of the space it did.",
+        "timestamp": "2026-11-20T03:16:49Z"
       }
     ]
   },
