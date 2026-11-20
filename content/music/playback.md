@@ -28,3 +28,4 @@ Set up in [`/music`](/docs/reference/commands) (`player`) or **Dashboard → Mus
 - **DJ Role:** Restrict playback controls to a specific role or leave open to `@everyone`.
 - **Cooldowns:** Configurable per-user (`1–60s`), per-guild (`1–10s`), control (`1–10s`), and channel slowmode (`0–21,600s`).
 - **Abuse Tripwire:** **5 violations within 30 seconds** triggers a temporary **1-minute** playback block (escalates to **5 minutes** if repeated within 10 minutes). Viewing the queue stays open.
+- **Recordings:** Music cannot start while a meeting is [recorded](/docs/server/engagement/recordings) in that server, and a recording cannot start while music plays.

@@ -182,6 +182,11 @@
         },
         {
           "type": "page",
+          "name": "Voice Recordings",
+          "url": "/docs/server/engagement/recordings"
+        },
+        {
+          "type": "page",
           "name": "Auto-Response, Starboard & Counters",
           "url": "/docs/server/engagement/tools"
         },

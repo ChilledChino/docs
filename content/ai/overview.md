@@ -30,6 +30,8 @@ Pick a model from the menu or leave it on **Auto**. **Auto** picks a stronger mo
 
 An image reaches the AI only when **your personal switch**, **the server's switch**, and **your plan** all allow it.
 
+- **Where:** In chat, in DMs to Chino, and in messages that @mention Chino.
+- **Blocked:** If pictures are off, Chino still answers your text and says it could not see the picture.
 - **Limits:** A few pictures per message, each up to a size limit (`PNG`, `JPEG`, `WebP`, `GIF`). See [Messages and pictures](/docs/reference/pricing#messages-and-pictures).
 - **Guests:** Cannot send images.
 
