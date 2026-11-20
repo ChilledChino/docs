@@ -322,6 +322,13 @@
         "text": "Billing control panel for the owner",
         "desc": "The admin panel lists every subscriber with filters, shows each person's billing history, and lets the owner set prices and PayPal plans, give premium for a chosen period, end a gift or trial, cancel auto-renew and refund the last payment.",
         "timestamp": "2026-11-20T07:13:25Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Safer premium plan changes",
+        "desc": "The plan picker marks each tier as an upgrade or downgrade and no longer offers the plan you already have. Picking your current plan again undoes a scheduled downgrade, closing the PayPal window and trying again no longer locks you out, and renewals are checked with PayPal regularly so a missed notice never ends premium you paid for.",
+        "timestamp": "2026-11-20T08:16:29Z"
       }
     ]
   },
