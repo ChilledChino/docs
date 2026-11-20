@@ -308,6 +308,20 @@
         "text": "Premium page and pricing docs follow plan changes",
         "desc": "The Premium page and the Pricing and Limits docs page now show the current limits of every plan, including any changes made to a plan, instead of a fixed copy.",
         "timestamp": "2026-11-20T05:41:55Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Premium renews automatically, with fair upgrades and downgrades",
+        "desc": "Premium is now a monthly PayPal subscription. Upgrading charges only the difference for the rest of the month and switches at once; downgrading switches when the paid month ends; cancelling stops PayPal charging while you keep what you paid for. If a renewal payment fails, premium stays on for a few days while PayPal retries. People who paid month by month can turn on auto-renew without paying twice, and free trials (no PayPal needed) are ready but switched off for now.",
+        "timestamp": "2026-11-20T07:13:25Z"
+      },
+      {
+        "type": "feat",
+        "scope": "bot",
+        "text": "Billing control panel for the owner",
+        "desc": "The admin panel lists every subscriber with filters, shows each person's billing history, and lets the owner set prices and PayPal plans, give premium for a chosen period, end a gift or trial, cancel auto-renew and refund the last payment.",
+        "timestamp": "2026-11-20T07:13:25Z"
       }
     ]
   },

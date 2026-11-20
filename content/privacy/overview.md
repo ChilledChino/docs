@@ -20,6 +20,7 @@ Prompts go to Chino's AI provider. Sent: system rules, your message and recent c
 | **Analytics Digest Messages** | Read in memory, summarized without authors/links, and dropped | Never stored |
 | **Voice Recordings** | The audio of each person who was recorded, in private storage. Only the host, server managers and the people who took part (and did not opt out) can play it | **7 days** after the meeting, then deleted |
 | **Meeting Transcripts** | Not made: no meeting audio is sent to an AI provider | - |
+| **Premium Billing** | PayPal handles the payment; we never see card or bank details. We keep your PayPal subscription ID, your plan and its dates, and a log of premium changes (purchases, renewals, gifts, trials, cancellations, refunds) | For as long as billing records must be kept |
 
 Turning off chat saving (personally or per server) immediately deletes the saved chats it covered. Guests' chats are never saved.
 
