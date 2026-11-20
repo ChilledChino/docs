@@ -10,6 +10,20 @@
     "changes": [
       {
         "type": "fix",
+        "scope": "dashboard",
+        "text": "Keep premium subscriptions consistent through billing retries",
+        "desc": "Paid renewals can no longer be overwritten by the expiry check or applied twice when PayPal retries a notification. Failed renewal reminders are eligible for another attempt.",
+        "timestamp": "2026-11-20T05:38:39Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Report session lookup outages as temporary",
+        "desc": "The dashboard API reports a temporary service error when it cannot check a session. Session checks stop when the request is canceled.",
+        "timestamp": "2026-11-20T05:38:39Z"
+      },
+      {
+        "type": "fix",
         "scope": "bot",
         "text": "Fix NullReferenceException in channel checks on external servers",
         "desc": "Fall back to interaction channel ID so user-installed context commands (Explain, Ask Chino) run in servers where Chino is not a member.",
