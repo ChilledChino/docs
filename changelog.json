@@ -1,12 +1,12 @@
 [
   {
-    "version": "4.1.1",
+    "version": "4.2.0",
     "major": 4,
-    "minor": 1,
-    "patch": 1,
+    "minor": 2,
+    "patch": 0,
     "prerelease": null,
-    "released_at": "2026-11-17",
-    "summary": "Fix interaction channel check on external servers and show ErrorId in console logs.",
+    "released_at": "2026-11-20",
+    "summary": "Premium on PayPal subscriptions with prorated upgrades and an owner billing panel, voice recordings, professional logging and tracing, and many reliability fixes.",
     "changes": [
       {
         "type": "fix",
@@ -70,41 +70,6 @@
         "text": "Report session lookup outages as temporary",
         "desc": "The dashboard API reports a temporary service error when it cannot check a session. Session checks stop when the request is canceled.",
         "timestamp": "2026-11-20T05:38:39Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Fix NullReferenceException in channel checks on external servers",
-        "desc": "Fall back to interaction channel ID so user-installed context commands (Explain, Ask Chino) run in servers where Chino is not a member.",
-        "timestamp": "2026-11-17T14:30:00Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Show ErrorId in text console output template",
-        "desc": "Reference IDs (E-XXXXXXXX) are now visible in plain text stdout logs.",
-        "timestamp": "2026-11-17T14:35:00Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Fix /user info silent failure in DMs and external servers",
-        "desc": "Prevent Discord 400 Bad Request error on empty banner URLs, add guild null-safety for non-guild callers, and await paginator dispatches.",
-        "timestamp": "2026-11-17T15:10:00Z"
-      },
-      {
-        "type": "feat",
-        "scope": "dashboard",
-        "text": "Dynamic Bot & Gateway version display on /status",
-        "desc": "Display live liveness, database readiness, and runtime version badges for both Discord Bot Core and API Gateway on the status dashboard without exposing internal metrics.",
-        "timestamp": "2026-11-17T16:15:00Z"
-      },
-      {
-        "type": "fix",
-        "scope": "ai",
-        "text": "Fix SynchronizationLockException in AgentRuntime.StartAsync",
-        "desc": "Replace thread-affine Monitor lock with async-compatible SemaphoreSlim in AgentRuntime to prevent exit failures when unwinding async state machines on ThreadPool transitions.",
-        "timestamp": "2026-11-18T00:10:00Z"
       },
       {
         "type": "fix",
@@ -343,6 +308,52 @@
         "text": "Show every limit no longer leaves blank rows",
         "desc": "Expanding the pricing table on the home page now shows every limit instead of empty gaps.",
         "timestamp": "2026-11-20T08:50:39Z"
+      }
+    ]
+  },
+  {
+    "version": "4.1.1",
+    "major": 4,
+    "minor": 1,
+    "patch": 1,
+    "prerelease": null,
+    "released_at": "2026-11-17",
+    "summary": "Fix interaction channel check on external servers and show ErrorId in console logs.",
+    "changes": [
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Fix NullReferenceException in channel checks on external servers",
+        "desc": "Fall back to interaction channel ID so user-installed context commands (Explain, Ask Chino) run in servers where Chino is not a member.",
+        "timestamp": "2026-11-17T14:30:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Show ErrorId in text console output template",
+        "desc": "Reference IDs (E-XXXXXXXX) are now visible in plain text stdout logs.",
+        "timestamp": "2026-11-17T14:35:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Fix /user info silent failure in DMs and external servers",
+        "desc": "Prevent Discord 400 Bad Request error on empty banner URLs, add guild null-safety for non-guild callers, and await paginator dispatches.",
+        "timestamp": "2026-11-17T15:10:00Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Dynamic Bot & Gateway version display on /status",
+        "desc": "Display live liveness, database readiness, and runtime version badges for both Discord Bot Core and API Gateway on the status dashboard without exposing internal metrics.",
+        "timestamp": "2026-11-17T16:15:00Z"
+      },
+      {
+        "type": "fix",
+        "scope": "ai",
+        "text": "Fix SynchronizationLockException in AgentRuntime.StartAsync",
+        "desc": "Replace thread-affine Monitor lock with async-compatible SemaphoreSlim in AgentRuntime to prevent exit failures when unwinding async state machines on ThreadPool transitions.",
+        "timestamp": "2026-11-18T00:10:00Z"
       }
     ]
   },
