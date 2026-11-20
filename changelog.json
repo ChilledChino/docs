@@ -203,6 +203,20 @@
         "text": "Recordings take much less storage",
         "desc": "Each speaker's playback file now stores silence far more compactly, and the raw recorded pieces are removed once the playback files are ready, so a long meeting with little talking uses a fraction of the space it did.",
         "timestamp": "2026-11-20T03:16:49Z"
+      },
+      {
+        "type": "feat",
+        "scope": "dashboard",
+        "text": "Merge speakers of a recording into one file",
+        "desc": "In a recording's playback, tick two or more speakers and merge them into a single file to download. You keep one merged file per meeting; merging again replaces it.",
+        "timestamp": "2026-11-20T03:43:57Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Recording downloads save with a readable name",
+        "desc": "Download now saves a speaker's file as channel, date and name instead of opening it in a new tab, and gets a fresh link if the old one was about to expire.",
+        "timestamp": "2026-11-20T03:43:57Z"
       }
     ]
   },
