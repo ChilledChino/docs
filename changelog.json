@@ -11,6 +11,34 @@
       {
         "type": "fix",
         "scope": "dashboard",
+        "text": "Keep revoked dashboard sessions signed out",
+        "desc": "Discord refresh and private dashboard streams now respect session revocation. Open support ticket streams also recheck the viewer's permissions.",
+        "timestamp": "2026-11-20T06:26:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Recover PayPal payments and refunds after missed notifications",
+        "desc": "The gateway periodically checks unresolved orders and refunds. An older renewal can only extend the tier it paid for, and subscription expiry runs before the bot sends reminders. The unused recurring checkout route was removed.",
+        "timestamp": "2026-11-20T06:26:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "ai",
+        "text": "Share guest session limits across gateway instances",
+        "desc": "Guest limits survive restarts and deployments, and the gateway rejects oversized guest session requests.",
+        "timestamp": "2026-11-20T06:26:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Keep dashboard requests responsive during streaming and shutdown",
+        "desc": "Live streams have their own connection pool. Guild lists and modlogs have upstream deadlines, and the gateway gives ordinary requests time to finish during a restart.",
+        "timestamp": "2026-11-20T06:26:54Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
         "text": "Preserve paid subscription changes during billing races",
         "desc": "Canceling renewal preserves time already paid for, and an older upgrade checkout cannot lower a newer tier. PayPal refunds stay pending until confirmed, and overlapping gateway instances coordinate renewal reminders.",
         "timestamp": "2026-11-20T05:52:20Z"
