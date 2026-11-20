@@ -18,7 +18,7 @@ Everything can be managed from **Discord panels** or the **web dashboard** (`/da
 
 ## 3. Turn On AI (Optional)
 
-Server AI starts **off** until an admin configures it:
+Server AI starts **off** until an admin configures it. Until then Chino does not read the server or answer mentions, but members can still use [`/ask`](/docs/reference/commands) as a private chat that knows nothing about the server:
 
 1. Open **Dashboard → AI Settings** (`/dashboard/<id>/ai`) and enable AI.
 2. Pick which features are on ([Chat](/docs/ai/overview), [Server Knowledge](/docs/ai/knowledge), [Catch Up](/docs/ai/overview), [Automation](/docs/server/engagement/automation), [Server Setup](/docs/ai/overview), [Support](/docs/server/support/desks)).
