@@ -9,6 +9,20 @@
     "summary": "Voice recordings, auto-renewing premium with fair upgrades and downgrades, your plan on the home page, and many reliability fixes.",
     "changes": [
       {
+        "type": "fix",
+        "scope": "ai",
+        "text": "Keep completed chat turns in order",
+        "desc": "A chat waits for its current request to finish saving before accepting another message, so overlapping requests cannot overwrite a recent turn.",
+        "timestamp": "2026-11-20T09:26:05Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Protect cancelled and retried reminders",
+        "desc": "Reminders are claimed close to delivery, and an old delivery attempt cannot overwrite a newer attempt or a cancellation.",
+        "timestamp": "2026-11-20T09:26:05Z"
+      },
+      {
         "type": "feat",
         "scope": "bot",
         "text": "Voice recordings",
@@ -77,6 +91,34 @@
         "text": "Reliability and security fixes",
         "desc": "Signed-out sessions stay signed out, payments and refunds are recovered when a PayPal notice is missed, a renewal is never lost or applied twice, guest chat limits hold across restarts, and the dashboard stays responsive while it restarts.",
         "timestamp": "2026-11-20T08:50:39Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Make scheduled actions and giveaway entries more reliable",
+        "desc": "A temporary database error no longer skips a scheduled minute, and simultaneous giveaway entries respect the participant limit and deadline.",
+        "timestamp": "2026-11-20T07:08:08Z"
+      },
+      {
+        "type": "fix",
+        "scope": "music",
+        "text": "Avoid disconnecting newly started playback",
+        "desc": "The idle watcher checks the current player and pending requests before leaving voice.",
+        "timestamp": "2026-11-20T07:08:08Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Protect support transcript retention",
+        "desc": "Tickets keep the correct retention period, and expired transcripts are processed oldest first. Replies and inactivity timeouts now respect the ticket's current state.",
+        "timestamp": "2026-11-20T07:08:08Z"
+      },
+      {
+        "type": "fix",
+        "scope": "bot",
+        "text": "Make recording opt-outs more reliable",
+        "desc": "Concurrent opt-outs use the latest participant list, and removal of stored playback files is retried if storage is unavailable.",
+        "timestamp": "2026-11-20T07:08:08Z"
       }
     ]
   },
