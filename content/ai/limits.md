@@ -15,13 +15,13 @@ Chino refuses requests that are illegal, harmful, harassing, about private data,
 | Points in 24 hours | Action |
 |---|---|
 | **3 points** | Warning |
-| **6 points** | AI access paused for **24 hours** (or until cleared by bot staff) |
+| **6 points** | AI access paused for **24 hours** (or until the Chino team clears it) |
 
 Being asked *about* a hostile message in a channel never penalizes the person who asked.
 
 ## Guest Caps
 
-Guests (not signed in) have strict daily caps. Defaults:
+Guests (not signed in) have strict daily caps:
 
 | Scope | Normal Chat | Docs Assistant (`/docs`) |
 |---|---|---|

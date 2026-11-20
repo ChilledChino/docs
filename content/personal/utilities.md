@@ -10,7 +10,7 @@ Quick lookup, image, translation, and server inspection commands.
 | [`/ip`](/docs/reference/commands) `<ip>` | IPv4/IPv6 geolocation, ISP, ASN, mobile/proxy/hosting flags |
 | [`/movie`](/docs/reference/commands) `<title>` | Movie search with interactive picker, poster, ratings, cast, and plot |
 | [`/translate`](/docs/reference/commands) `<text> <to> [from]` | Translate text with language detection and confidence score |
-| [`/info`](/docs/reference/commands) | Bot memory, uptime, shard latency/counts, and Lavalink node stats |
+| [`/info`](/docs/reference/commands) | Chino's status: uptime and connection speed |
 | [`/user info`](/docs/reference/commands) `[user]` | Member account age, join date, timeout status, roles, and permissions |
 
 ## Images

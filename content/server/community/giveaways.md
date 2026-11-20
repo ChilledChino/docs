@@ -10,7 +10,7 @@ Use [`/giveaway`](/docs/reference/commands) (`create`) or the dashboard drawer t
 - **Prize & Winners:** Prize title, description, and number of winners.
 - **Schedule:** Start time (immediate or scheduled) and end time.
 - **Channel:** Target Discord channel where the giveaway card is posted.
-- **Requirements & Winner Mode:** See [Entry Requirements](/docs/server/community/giveaways-requirements) and [Winner Modes & Lucky Draw](/docs/server/community/giveaways-lucky-draw).
+- **Requirements & Winner Mode:** See [Entry Requirements](/docs/server/community/giveaways-requirements) and [Winner Modes & Lucky Draw](/docs/server/community/giveaways-lucky-draw). With **Lucky Draw**, the host has one more step after the giveaway ends.
 
 ## Managing Active Giveaways
 

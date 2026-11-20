@@ -25,4 +25,4 @@ Build **Trigger → Conditions → Actions** rules in [`/automate`](/docs/refere
 | Max conditions / actions per rule | **8** conditions / **5** actions |
 | Max text length / rule name | **1,900** chars / **80** chars |
 | Max delay | **30 days** (43,200 minutes) |
-| Default rate limits | **300/hr** (`member_join`, `role_change`), **60/hr** (`message`, `reaction`, `schedule`), ceiling **600/hr** |
+| Rate limits | **300/hr** (`member_join`, `role_change`), **60/hr** (`message`, `reaction`, `schedule`), ceiling **600/hr** |

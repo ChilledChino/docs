@@ -4,7 +4,7 @@ What Chino processes, what is stored, for how long, and the controls you have.
 
 ## What Reaches the AI Provider
 
-Prompts go to the AI provider configured by the bot's operator. Sent: system rules, your message and recent chat turns, tool results the AI requested (such as allowed channel messages or knowledge passages), and pictures if allowed. **Never sent:** tokens, passwords, or other servers' data. The provider's own terms apply to what it receives.
+Prompts go to Chino's AI provider. Sent: system rules, your message and recent chat turns, tool results the AI requested (such as allowed channel messages or knowledge passages), and pictures if allowed. **Never sent:** tokens, passwords, or other servers' data. The provider's own terms apply to what it receives.
 
 ## What Is Stored
 
@@ -46,5 +46,5 @@ Admins can disable AI, restrict features, disable image inputs, disable chat sav
 ## Known Limitations
 
 - **Delete lag:** A deleted or edited message can still be quoted from a knowledge source until the next re-read (up to 1 hour for public sources, 24 hours otherwise).
-- **Opt-out and past calls:** Opting out stops future reads; it cannot remove text already sent to the upstream provider.
-- **Provider retention:** Retention by the upstream AI provider is governed by that provider's policy.
+- **Opt-out and past calls:** Opting out stops future reads; it cannot remove text already sent to Chino's AI provider.
+- **Provider retention:** Chino's AI provider keeps data under its own policy.
