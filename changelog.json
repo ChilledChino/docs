@@ -6,307 +6,76 @@
     "patch": 0,
     "prerelease": null,
     "released_at": "2026-11-20",
-    "summary": "Premium on PayPal subscriptions with prorated upgrades and an owner billing panel, voice recordings, professional logging and tracing, and many reliability fixes.",
+    "summary": "Voice recordings, auto-renewing premium with fair upgrades and downgrades, your plan on the home page, and many reliability fixes.",
     "changes": [
       {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Keep revoked dashboard sessions signed out",
-        "desc": "Discord refresh and private dashboard streams now respect session revocation. Open support ticket streams also recheck the viewer's permissions.",
-        "timestamp": "2026-11-20T06:26:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Recover PayPal payments and refunds after missed notifications",
-        "desc": "The gateway periodically checks unresolved orders and refunds. An older renewal can only extend the tier it paid for, and subscription expiry runs before the bot sends reminders. The unused recurring checkout route was removed.",
-        "timestamp": "2026-11-20T06:26:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "ai",
-        "text": "Share guest session limits across gateway instances",
-        "desc": "Guest limits survive restarts and deployments, and the gateway rejects oversized guest session requests.",
-        "timestamp": "2026-11-20T06:26:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Keep dashboard requests responsive during streaming and shutdown",
-        "desc": "Live streams have their own connection pool. Guild lists and modlogs have upstream deadlines, and the gateway gives ordinary requests time to finish during a restart.",
-        "timestamp": "2026-11-20T06:26:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Preserve paid subscription changes during billing races",
-        "desc": "Canceling renewal preserves time already paid for, and an older upgrade checkout cannot lower a newer tier. PayPal refunds stay pending until confirmed, and overlapping gateway instances coordinate renewal reminders.",
-        "timestamp": "2026-11-20T05:52:20Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Protect dashboard session refresh during a takeover",
-        "desc": "A delayed refresh request cannot overwrite or remove another request's session rotation.",
-        "timestamp": "2026-11-20T05:52:20Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Limit PayPal webhook request size",
-        "desc": "The gateway rejects oversized PayPal notifications before asking PayPal to verify them.",
-        "timestamp": "2026-11-20T05:52:20Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Keep premium subscriptions consistent through billing retries",
-        "desc": "Paid renewals can no longer be overwritten by the expiry check or applied twice when PayPal retries a notification. Failed renewal reminders are eligible for another attempt.",
-        "timestamp": "2026-11-20T05:38:39Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Report session lookup outages as temporary",
-        "desc": "The dashboard API reports a temporary service error when it cannot check a session. Session checks stop when the request is canceled.",
-        "timestamp": "2026-11-20T05:38:39Z"
-      },
-      {
-        "type": "fix",
-        "scope": "ai",
-        "text": "Chino can see pictures sent in DMs and mentions",
-        "desc": "A picture attached to a message sent to Chino in a DM or with an @mention now reaches the AI, within the usual picture limits and switches. When pictures are turned off, Chino still answers the text and says it could not see the picture.",
-        "timestamp": "2026-11-18T05:30:00Z"
-      },
-      {
-        "type": "change",
-        "scope": "music",
-        "text": "Songs start faster",
-        "desc": "A song that has been matched to an audio stream is remembered for up to six months, so playing it again starts right away without searching, even after a restart. The audio sources are kept warm in the background, so the first song after a quiet spell no longer times out. A stream that stops working is searched for again.",
-        "timestamp": "2026-11-18T05:45:00Z"
-      },
-      {
         "type": "feat",
         "scope": "bot",
-        "text": "Discord voice recording pipeline and owner management console",
-        "desc": "Added high-performance voice recording architecture with Discord gateway voice relaying, consent fencing, per-channel participant tracking, and an owner recorder management panel under /admin/recorder.",
-        "timestamp": "2026-11-18T05:54:00Z"
-      },
-      {
-        "type": "feat",
-        "scope": "bot",
-        "text": "Live speaking audio visualizer stream proxy",
-        "desc": "Real-time SSE proxying for recording session events, dynamically streaming audio energy and speaking indicators from voice recording agents directly to the dashboard.",
-        "timestamp": "2026-11-18T05:54:00Z"
-      },
-      {
-        "type": "feat",
-        "scope": "bot",
-        "text": "/record Discord panel for voice session control",
-        "desc": "Manage voice recording sessions directly in Discord with an interactive Components V2 panel to start or stop recording, view recent session archives, and configure channel consent and retention settings.",
-        "timestamp": "2026-11-18T12:45:00Z"
+        "text": "Voice recordings",
+        "desc": "Record a meeting from /record or the dashboard. Everyone in the call is told and can opt out, and \"Include my voice\" is always respected. Only the host, server managers and the people in the meeting can listen: every speaker plays side by side, and you can download a speaker or merge several into one file. Chino can message you when a recording is ready, and recordings are deleted after 7 days. Meetings are not transcribed, and music and recording take turns in a server.",
+        "timestamp": "2026-11-20T08:50:39Z"
       },
       {
         "type": "feat",
         "scope": "dashboard",
-        "text": "Voice recordings dashboard and audio playback drawer",
-        "desc": "Browse recorded voice meetings in the server dashboard with live SSE speaking visualizers, filter sessions, and listen to master or individual speaker audio tracks in an audio playback drawer.",
-        "timestamp": "2026-11-18T12:46:00Z"
-      },
-      {
-        "type": "feat",
-        "scope": "ai",
-        "text": "AI meeting transcription with speaker separation",
-        "desc": "Transcribe recorded voice meetings on demand or automatically after inactivity, mapping speech segments back to exact Discord user names and timestamps with an interactive transcript viewer and JSON export.",
-        "timestamp": "2026-11-18T12:47:00Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Recordings list shows sessions correctly",
-        "desc": "The recordings page now reads each meeting's status, speakers and length correctly, so live and past meetings show up as they should.",
-        "timestamp": "2026-11-19T08:05:33Z"
-      },
-      {
-        "type": "change",
-        "scope": "dashboard",
-        "text": "Recordings page matches the rest of the dashboard",
-        "desc": "The recordings page, playback drawer and transcript window now use the same plain sections, badges and buttons as the other settings pages, and their text is readable in the dark theme.",
-        "timestamp": "2026-11-19T08:06:33Z"
-      },
-      {
-        "type": "change",
-        "scope": "ai",
-        "text": "Meeting transcripts are paused",
-        "desc": "Recorded meetings are not transcribed for now, and no meeting audio is sent to an AI service. Transcripts will come back once their privacy rules are in place.",
-        "timestamp": "2026-11-19T08:11:28Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Only the people in a meeting can open its recording",
-        "desc": "A recording can be opened by its host, server managers and the people who took part, unless they opted out. Recording also stays off if its settings are missing.",
-        "timestamp": "2026-11-19T08:12:28Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Recordings respect \"Include my voice\"",
-        "desc": "A recording only captures the people in the voice channel (or the people the host picked), and never anyone who turned \"Include my voice\" off. If too many people are in the channel, the recording does not start instead of leaving some of them out.",
-        "timestamp": "2026-11-19T08:16:29Z"
-      },
-      {
-        "type": "change",
-        "scope": "music",
-        "text": "Music and recordings take turns",
-        "desc": "Chino has one voice connection per server, so music cannot start while a meeting is being recorded, and a recording cannot start while music plays. Each says why.",
-        "timestamp": "2026-11-19T08:17:29Z"
-      },
-      {
-        "type": "feat",
-        "scope": "bot",
-        "text": "Everyone in a recorded call is told, and can opt out",
-        "desc": "When a meeting is recorded, Chino posts a notice with an Opt out button in the voice channel's chat, and does not record if it cannot post it. Opting out deletes what was recorded of you in that meeting, people who join later are included, and the host can pick exactly who to record.",
-        "timestamp": "2026-11-19T08:21:41Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Recordings keep their last seconds and end on time",
-        "desc": "Stopping a recording no longer throws away the audio that was still being saved, a meeting stops by itself at its time limit, and a meeting whose recorder fails ends with what was saved instead of blocking the server. Chino rejoins the call if its connection drops.",
-        "timestamp": "2026-11-19T08:51:49Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Recordings play the whole meeting",
-        "desc": "Playback now plays every speaker side by side for the full meeting, with working Solo and Mute, speaker names, a download per speaker and marks where audio could not be saved. Before, only the first couple of seconds played.",
-        "timestamp": "2026-11-19T09:04:14Z"
-      },
-      {
-        "type": "feat",
-        "scope": "bot",
-        "text": "A message when your recording is ready",
-        "desc": "If you turned on \"Message me when a recording is ready\", Chino sends you a link once a meeting you were in has been saved. The link opens the recording on the dashboard after you sign in.",
-        "timestamp": "2026-11-19T09:16:15Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Recording settings, names and buttons are correct",
-        "desc": "Your recording switches now show what you saved, people are listed by name, and you only see the buttons you can use. Managers can start a recording from the dashboard, and links from Discord open the right recording.",
-        "timestamp": "2026-11-19T09:17:15Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "The live speaking view is only for the people in the meeting",
-        "desc": "Who is speaking in a live recording can only be seen by the host, managers and the people being recorded, and only for meetings in that server.",
-        "timestamp": "2026-11-19T09:18:15Z"
-      },
-      {
-        "type": "change",
-        "scope": "bot",
-        "text": "Recordings are deleted after 7 days",
-        "desc": "A recording, its playback files and everything about it are deleted 7 days after the meeting (an hour after a recording that failed to start). The privacy page now covers voice recordings.",
-        "timestamp": "2026-11-19T09:19:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "bot",
-        "text": "Corrected what voice recording does",
-        "desc": "Earlier notes for this version promised retention settings, transcripts with speaker names and transcription after inactivity. Recordings are kept a fixed 7 days, and transcripts are paused for now; everything else described in the newer recording entries is how it works.",
-        "timestamp": "2026-11-19T09:20:54Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "The recordings page updates live",
-        "desc": "The live speaking view now connects, and a running or just-stopped meeting updates by itself instead of staying on \"Stopping\" until you refresh.",
-        "timestamp": "2026-11-19T10:52:33Z"
-      },
-      {
-        "type": "change",
-        "scope": "bot",
-        "text": "Recordings take much less storage",
-        "desc": "Each speaker's playback file now stores silence far more compactly, and the raw recorded pieces are removed once the playback files are ready, so a long meeting with little talking uses a fraction of the space it did.",
-        "timestamp": "2026-11-20T03:16:49Z"
+        "text": "Premium renews automatically",
+        "desc": "Premium is now a monthly PayPal subscription. Upgrading charges only the difference for the rest of the month and switches at once, downgrading switches when your paid month ends, and cancelling stops future charges while you keep what you paid for. If a payment fails, premium stays on for a few days while PayPal retries. If you paid month by month, you can turn on auto-renew without paying twice.",
+        "timestamp": "2026-11-20T08:50:39Z"
       },
       {
         "type": "feat",
         "scope": "dashboard",
-        "text": "Merge speakers of a recording into one file",
-        "desc": "In a recording's playback, tick two or more speakers and merge them into a single file to download. You keep one merged file per meeting; merging again replaces it.",
-        "timestamp": "2026-11-20T03:43:57Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Recording downloads save with a readable name",
-        "desc": "Download now saves a speaker's file as channel, date and name instead of opening it in a new tab, and gets a fresh link if the old one was about to expire.",
-        "timestamp": "2026-11-20T03:43:57Z"
-      },
-      {
-        "type": "change",
-        "scope": "ai",
-        "text": "Chino shows one thinking sign, then answers",
-        "desc": "Asking Chino no longer shows \"Chino is thinking\" and then \"Thinking…\" before the answer. Slash commands show Discord's own thinking message, mentions and DMs show Chino typing, and the answer appears and fills in more smoothly.",
-        "timestamp": "2026-11-20T05:15:19Z"
-      },
-      {
-        "type": "change",
-        "scope": "ai",
-        "text": "AI is off in a server until an admin turns it on",
-        "desc": "Servers that never saved an AI setting no longer have AI available to members. An admin turns it on in the dashboard under AI Settings. Servers that already saved their settings are not changed.",
-        "timestamp": "2026-11-20T05:20:48Z"
-      },
-      {
-        "type": "change",
-        "scope": "infra",
-        "text": "Professional logging and request tracing",
-        "desc": "The bot, the API gateway and the dashboard now write logs in one format with the same fields, each line tagged with the feature it came from, and a trace id that follows a request across all three; traces can be sent to Grafana Tempo or any OpenTelemetry collector. Operators can raise the log level of one feature from the admin panel, repeated errors are capped instead of flooding the log, routine web-server chatter is gone, and a dashboard log line that printed a user's session was removed.",
-        "timestamp": "2026-11-20T06:00:41Z"
-      },
-      {
-        "type": "change",
-        "scope": "dashboard",
-        "text": "Premium page and pricing docs follow plan changes",
-        "desc": "The Premium page and the Pricing and Limits docs page now show the current limits of every plan, including any changes made to a plan, instead of a fixed copy.",
-        "timestamp": "2026-11-20T05:41:55Z"
-      },
-      {
-        "type": "feat",
-        "scope": "dashboard",
-        "text": "Premium renews automatically, with fair upgrades and downgrades",
-        "desc": "Premium is now a monthly PayPal subscription. Upgrading charges only the difference for the rest of the month and switches at once; downgrading switches when the paid month ends; cancelling stops PayPal charging while you keep what you paid for. If a renewal payment fails, premium stays on for a few days while PayPal retries. People who paid month by month can turn on auto-renew without paying twice, and free trials (no PayPal needed) are ready but switched off for now.",
-        "timestamp": "2026-11-20T07:13:25Z"
+        "text": "Your plan on the home page pricing",
+        "desc": "The pricing table shows current prices and any free trials. When you are signed in, it shows your plan, when it renews or ends and how many days are left, and the other tiers say Upgrade or Downgrade.",
+        "timestamp": "2026-11-20T08:50:39Z"
       },
       {
         "type": "feat",
         "scope": "bot",
         "text": "Billing control panel for the owner",
-        "desc": "The admin panel lists every subscriber with filters, shows each person's billing history, and lets the owner set prices and PayPal plans, give premium for a chosen period, end a gift or trial, cancel auto-renew and refund the last payment.",
-        "timestamp": "2026-11-20T07:13:25Z"
-      },
-      {
-        "type": "fix",
-        "scope": "dashboard",
-        "text": "Safer premium plan changes",
-        "desc": "The plan picker marks each tier as an upgrade or downgrade and no longer offers the plan you already have. Picking your current plan again undoes a scheduled downgrade, closing the PayPal window and trying again no longer locks you out, and renewals are checked with PayPal regularly so a missed notice never ends premium you paid for.",
-        "timestamp": "2026-11-20T08:16:29Z"
+        "desc": "The admin panel lists every subscriber and their billing history, and lets the owner set prices, give premium for a chosen period, cancel auto-renew and refund the last payment.",
+        "timestamp": "2026-11-20T08:50:39Z"
       },
       {
         "type": "feat",
+        "scope": "ai",
+        "text": "Chino can see pictures in DMs and mentions",
+        "desc": "A picture you send to Chino in a DM or with an @mention now reaches the AI. If pictures are turned off, Chino still answers the text and says it could not see the picture.",
+        "timestamp": "2026-11-20T08:50:39Z"
+      },
+      {
+        "type": "change",
+        "scope": "ai",
+        "text": "One thinking sign, then the answer",
+        "desc": "Asking Chino shows a single thinking or typing sign instead of two, and the answer fills in more smoothly.",
+        "timestamp": "2026-11-20T08:50:39Z"
+      },
+      {
+        "type": "change",
+        "scope": "ai",
+        "text": "AI is off in a server until an admin turns it on",
+        "desc": "Servers that never set up AI no longer have it on for members. An admin turns it on in the dashboard under AI Settings; servers that already saved their settings are not changed.",
+        "timestamp": "2026-11-20T08:50:39Z"
+      },
+      {
+        "type": "change",
+        "scope": "music",
+        "text": "Songs start faster",
+        "desc": "Songs played before start right away, even after a restart, and the first song after a quiet spell no longer times out.",
+        "timestamp": "2026-11-20T08:50:39Z"
+      },
+      {
+        "type": "change",
         "scope": "dashboard",
-        "text": "Personal pricing on the landing page",
-        "desc": "The home page pricing shows current prices and free trials, and when you're signed in, your plan: when it renews or ends, days left and auto-renew. Your own tier can't be chosen again; the others say Upgrade or Downgrade.",
+        "text": "Premium page shows each plan's current limits",
+        "desc": "The Premium page and the Pricing and Limits docs show the limits every plan has now, instead of a fixed copy.",
         "timestamp": "2026-11-20T08:50:39Z"
       },
       {
         "type": "fix",
         "scope": "dashboard",
-        "text": "Show every limit no longer leaves blank rows",
-        "desc": "Expanding the pricing table on the home page now shows every limit instead of empty gaps.",
+        "text": "Reliability and security fixes",
+        "desc": "Signed-out sessions stay signed out, payments and refunds are recovered when a PayPal notice is missed, a renewal is never lost or applied twice, guest chat limits hold across restarts, and the dashboard stays responsive while it restarts.",
         "timestamp": "2026-11-20T08:50:39Z"
       }
     ]
