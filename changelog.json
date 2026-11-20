@@ -224,6 +224,13 @@
         "text": "Chino shows one thinking sign, then answers",
         "desc": "Asking Chino no longer shows \"Chino is thinking\" and then \"Thinking…\" before the answer. Slash commands show Discord's own thinking message, mentions and DMs show Chino typing, and the answer appears and fills in more smoothly.",
         "timestamp": "2026-11-20T05:15:19Z"
+      },
+      {
+        "type": "change",
+        "scope": "ai",
+        "text": "AI is off in a server until an admin turns it on",
+        "desc": "Servers that never saved an AI setting no longer have AI available to members. An admin turns it on in the dashboard under AI Settings. Servers that already saved their settings are not changed.",
+        "timestamp": "2026-11-20T05:20:48Z"
       }
     ]
   },
