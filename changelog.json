@@ -11,6 +11,27 @@
       {
         "type": "fix",
         "scope": "dashboard",
+        "text": "Preserve paid subscription changes during billing races",
+        "desc": "Canceling renewal preserves time already paid for, and an older upgrade checkout cannot lower a newer tier. PayPal refunds stay pending until confirmed, and overlapping gateway instances coordinate renewal reminders.",
+        "timestamp": "2026-11-20T05:52:20Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Protect dashboard session refresh during a takeover",
+        "desc": "A delayed refresh request cannot overwrite or remove another request's session rotation.",
+        "timestamp": "2026-11-20T05:52:20Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
+        "text": "Limit PayPal webhook request size",
+        "desc": "The gateway rejects oversized PayPal notifications before asking PayPal to verify them.",
+        "timestamp": "2026-11-20T05:52:20Z"
+      },
+      {
+        "type": "fix",
+        "scope": "dashboard",
         "text": "Keep premium subscriptions consistent through billing retries",
         "desc": "Paid renewals can no longer be overwritten by the expiry check or applied twice when PayPal retries a notification. Failed renewal reminders are eligible for another attempt.",
         "timestamp": "2026-11-20T05:38:39Z"
