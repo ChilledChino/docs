@@ -10,27 +10,15 @@ Limits keep AI usage fair across users, servers, and guests. View your personal 
 
 ## Misuse Pauses
 
-Chino refuses requests that are illegal, harmful, harassing, about private data, or attempt to override its rules (including prompt-injection attempts):
-
-| Points in 24 hours | Action |
-|---|---|
-| **3 points** | Warning |
-| **6 points** | AI access paused for **24 hours** (or until the Chino team clears it) |
+Chino refuses requests that are illegal, harmful, harassing, about private data, or attempt to override its rules (including prompt-injection attempts). Refused requests add up as points: enough of them earns a **warning**, and more earns a **pause** of your AI access. The exact numbers are in [Misuse pauses](/docs/reference/pricing#misuse-pauses).
 
 Being asked *about* a hostile message in a channel never penalizes the person who asked.
 
 ## Guest Caps
 
-Guests (not signed in) have strict daily caps:
+Guests (not signed in) have strict caps per session, per visitor address, and across all guests, for normal chat and for the Docs Assistant (`/docs`). See [Guests](/docs/reference/pricing#guests-not-signed-in) for the current numbers.
 
-| Scope | Normal Chat | Docs Assistant (`/docs`) |
-|---|---|---|
-| Per session | **10 / day** | **5 / day** |
-| Per visitor address | **30 / day** | **10 / day** |
-| All guests combined | **500 / day** | **300 / day** |
-| Guests outside servers | **100 / day** | - |
-
-Signed-in users have a separate **30 / day** allowance for the Docs Assistant that does not consume their normal AI chat quota.
+Signed-in users have a separate Docs Assistant allowance that does not consume their normal AI chat quota.
 
 ## AI Activity Log (`/me/studio`)
 

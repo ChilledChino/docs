@@ -16,7 +16,7 @@ Prompts go to Chino's AI provider. Sent: system rules, your message and recent c
 | **Raw Channel History, Images, Model Reasoning** | Never written to storage | - |
 | **AI Usage Records** | Counts, timings, model alias, tokens only (no text); servers can set data use to `none` | - |
 | **Guest Counters** | Session ID + short hash of visitor address (never raw IP) | **40 days** |
-| **[Support Desk](/docs/server/support/desks) Transcripts** | Stored for closed tickets | **30 days** default (configurable per server) |
+| **[Support Desk](/docs/server/support/desks) Transcripts** | Stored for closed tickets | Default period in [Support desks](/docs/reference/pricing#support-desks) (configurable per server) |
 | **Analytics Digest Messages** | Read in memory, summarized without authors/links, and dropped | Never stored |
 | **Voice Recordings** | The audio of each person who was recorded, in private storage. Only the host, server managers and the people who took part (and did not opt out) can play it | **7 days** after the meeting, then deleted |
 | **Meeting Transcripts** | Not made: no meeting audio is sent to an AI provider | - |

@@ -23,5 +23,5 @@ Admins control who can use each AI feature in **Dashboard → Permissions & Link
 - **Plain Guest Chat (`/chat`):** Guests not in a server can chat without server tools or server data.
 - **Verification:** Guests pass a **Cloudflare Turnstile** check and receive a 24-hour signed session scoped to one server (or none).
 - **Guest Restrictions:**
-  - Max message length: **1,000 characters** (vs. 8,000 for members).
+  - Shorter messages than signed-in members ([Messages and pictures](/docs/reference/pricing#messages-and-pictures)).
   - No images, no personal tools, no server channel tools, and no chat history saving.

@@ -30,7 +30,7 @@ Pick a model from the menu or leave it on **Auto**. **Auto** picks a stronger mo
 
 An image reaches the AI only when **your personal switch**, **the server's switch**, and **your plan** all allow it.
 
-- **Limits:** Up to **3 images**, **5 MB** each (`PNG`, `JPEG`, `WebP`, `GIF`).
+- **Limits:** A few pictures per message, each up to a size limit (`PNG`, `JPEG`, `WebP`, `GIF`). See [Messages and pictures](/docs/reference/pricing#messages-and-pictures).
 - **Guests:** Cannot send images.
 
 ## Safe Server Changes
