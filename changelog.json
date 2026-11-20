@@ -252,6 +252,13 @@
         "text": "Quieter bot logs, filterable by feature",
         "desc": "Every bot log line now says which feature it came from, so operators can filter to automod, music, AI and so on. The web server's own per-request chatter and routine health checks are no longer logged.",
         "timestamp": "2026-11-20T05:29:05Z"
+      },
+      {
+        "type": "change",
+        "scope": "dashboard",
+        "text": "Premium page and pricing docs follow plan changes",
+        "desc": "The Premium page and the Pricing and Limits docs page now show the current limits of every plan, including any changes made to a plan, instead of a fixed copy.",
+        "timestamp": "2026-11-20T05:41:55Z"
       }
     ]
   },
