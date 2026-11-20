@@ -231,6 +231,13 @@
         "text": "AI is off in a server until an admin turns it on",
         "desc": "Servers that never saved an AI setting no longer have AI available to members. An admin turns it on in the dashboard under AI Settings. Servers that already saved their settings are not changed.",
         "timestamp": "2026-11-20T05:20:48Z"
+      },
+      {
+        "type": "change",
+        "scope": "infra",
+        "text": "Quieter bot logs, filterable by feature",
+        "desc": "Every bot log line now says which feature it came from, so operators can filter to automod, music, AI and so on. The web server's own per-request chatter and routine health checks are no longer logged.",
+        "timestamp": "2026-11-20T05:29:05Z"
       }
     ]
   },
