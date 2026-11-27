@@ -26,7 +26,7 @@
         "type": "feat",
         "scope": "bot",
         "text": "Voice recordings",
-        "desc": "Record a meeting from /record or the dashboard. Everyone in the call is told and can opt out, and \"Include my voice\" is always respected. Only the host, server managers and the people in the meeting can listen: every speaker plays side by side, each shows when they talk, you can jump between talks or skip silence, and you can download a speaker or merge several into one file. Chino can message you when a recording is ready, and recordings are deleted after 7 days. Meetings are not transcribed, and music and recording take turns in a server.",
+        "desc": "Record a meeting from /record or the dashboard. Everyone in the call is told and can opt out, and \"Include my voice\" is always respected. Only the host, server managers, and the people in the meeting can listen: every speaker plays side by side, each shows when they talk, you can jump between talks or skip silence, and you can download a speaker or merge several into one file. Chino can message you when a recording is ready, and recordings are deleted after 7 days. Meetings are not transcribed, and music and recording take turns in a server.",
         "timestamp": "2026-11-20T08:50:39Z"
       },
       {
