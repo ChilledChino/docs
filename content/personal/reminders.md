@@ -12,6 +12,6 @@ Create one-off or recurring reminders that deliver via Discord DM, from any serv
 
 ## Managing & Snoozing
 
-- **DM Buttons:** When a reminder fires in DMs, click to snooze (`10m` or `1h`) or mark done.
+- **DM Buttons:** When a reminder fires in DMs, click to snooze (`10m` or `1h`) or mark as done.
 - **Panel & Web:** Browse **Upcoming** (snooze `10m`, `1h`, `1d`, or cancel) and **History** (completed, cancelled, failed).
 - **DST Anchor:** Day-step recurrences preserve your local clock time across Daylight Saving Time transitions.

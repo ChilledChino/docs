@@ -4,7 +4,10 @@ What Chino processes, what is stored, for how long, and the controls you have.
 
 ## What Reaches the AI Provider
 
-Prompts go to Chino's AI provider. Sent: system rules, your message and recent chat turns, tool results the AI requested (such as allowed channel messages or knowledge passages), and pictures if allowed. **Never sent:** tokens, passwords, or other servers' data. The provider's own terms apply to what it receives.
+Prompts go to Chino's AI provider. The provider's own terms apply to what it receives.
+
+- **What is sent**: System rules, your message, and recent chat turns, tool results the AI requested (e.g. allowed channel messages or knowledge passages), and pictures if allowed.
+- **What is never sent:** tokens, passwords, or other server data. 
 
 ## What Is Stored
 
@@ -18,7 +21,7 @@ Prompts go to Chino's AI provider. Sent: system rules, your message and recent c
 | **Guest Counters** | Session ID + short hash of visitor address (never raw IP) | **40 days** |
 | **[Support Desk](/docs/server/support/desks) Transcripts** | Stored for closed tickets | Default period in [Support desks](/docs/reference/pricing#support-desks) (configurable per server) |
 | **Analytics Digest Messages** | Read in memory, summarized without authors/links, and dropped | Never stored |
-| **Voice Recordings** | The audio of each person who was recorded, in private storage. Only the host, server managers and the people who took part (and did not opt out) can play it | **7 days** after the meeting, then deleted |
+| **Voice Recordings** | The audio of each person who was recorded, in private storage. Only the host, server managers, and the people who took part (and did not opt out) can play it | **7 days** after the meeting, then deleted |
 | **Meeting Transcripts** | Not made: no meeting audio is sent to an AI provider | - |
 | **Premium Billing** | PayPal handles the payment; we never see card or bank details. We keep your PayPal subscription ID, your plan and its dates, and a log of premium changes (purchases, renewals, gifts, trials, cancellations, refunds) | For as long as billing records must be kept |
 
@@ -47,5 +50,5 @@ Admins can disable AI, restrict features, disable image inputs, disable chat sav
 ## Known Limitations
 
 - **Delete lag:** A deleted or edited message can still be quoted from a knowledge source until the next re-read (up to 1 hour for public sources, 24 hours otherwise).
-- **Opt-out and past calls:** Opting out stops future reads; it cannot remove text already sent to Chino's AI provider.
+- **Opt-out and past calls:** Opting out stops future reads. However, it cannot remove text already sent to Chino's AI provider.
 - **Provider retention:** Chino's AI provider keeps data under its own policy.

@@ -5,7 +5,7 @@ A page's url maps to a content file:
     /docs            -> content/index.md
     /docs/<path>     -> content/<path>.md
 
-The generator preserves the order, names and folder grouping already in
+The generator preserves the order, names, and folder grouping already in
 navigation.json, and appends any content file that has no node yet. New pages
 get a title from the file's first H1, falling back to the file name.
 """

@@ -4,7 +4,7 @@
 
 Celebrate member birthdays automatically with [`/birthday`](/docs/reference/commands) (`mine`, `upcoming`, `settings`), [`/configure`](/docs/reference/commands) (`birthday`), or **Dashboard → Birthdays** (`/dashboard/<id>/birthdays`):
 
-- **For Members:** Set your birthday (with optional birth year) and timezone in [`/birthday`](/docs/reference/commands) (`mine`), and browse upcoming server birthdays (`upcoming`).
+- **For Members:** Set your birthday (with an optional birth year) and timezone in [`/birthday`](/docs/reference/commands) (`mine`), and browse upcoming server birthdays (`upcoming`).
 - **For Admins:** Pick the announcement channel, optional birthday role ping, and custom template using `` `{users}` ``.
 
 ## Mini-Games & AFK

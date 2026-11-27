@@ -2,7 +2,7 @@
 
 ## Auto-Response
 
-Reply automatically when messages match a trigger string. Configure in [`/configure`](/docs/reference/commands) (`autoresponse`) or **Dashboard → Auto Response** (`/dashboard/<id>/auto-response`):
+Automatically reply when messages match a trigger string, which can be configured in [`/configure`](/docs/reference/commands) (`autoresponse`) or **Dashboard → Auto Response** (`/dashboard/<id>/auto-response`):
 
 - Set trigger text, case sensitivity, plain text or embed reply, and channel/role blacklists.
 

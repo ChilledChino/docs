@@ -13,4 +13,4 @@ Gate giveaway entries so only eligible members can join. Configure requirements 
 | **Thread Join** | Entrant must join a specific thread |
 | **Voice Channel Join** | Entrant must be connected to a voice channel |
 
-Members who do not meet all active requirements are shown what is missing when they try to enter.
+Members who do not meet all active requirements are shown what is missing when they attempt to enter.

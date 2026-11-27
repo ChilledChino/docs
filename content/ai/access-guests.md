@@ -13,8 +13,8 @@ Admins control who can use each AI feature in **Dashboard → Permissions & Link
 | **Automation** | Admins only | *Admins only* (locked) |
 | **Server Setup** | Admins only | *Admins only* (locked) |
 
-- **Admins** means the server owner, `Administrator`, `Manage Server`, or anyone granted the **AI** [dashboard module](/docs/reference/permissions).
-- **Allow-list:** When set to *Admins only*, you can still allow specific roles or members.
+- **Admins** refers to the server owner, `Administrator`, `Manage Server`, or anyone granted the **AI** [dashboard module](/docs/reference/permissions).
+- **Allow-list:** If set to *Admins only*, you can still allow specific roles or members.
 - **Public:** Only **[Server Knowledge](/docs/ai/knowledge)** can be opened to the public. Doing so requires `Manage Server` and is audited.
 
 ## Public Share Links & Guests
